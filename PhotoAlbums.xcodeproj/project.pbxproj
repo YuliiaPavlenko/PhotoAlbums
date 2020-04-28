@@ -22,6 +22,8 @@
 		AF4968C224584E3E00188743 /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968C124584E3E00188743 /* ResponseValidator.swift */; };
 		AF4968C524584E7A00188743 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968C424584E7A00188743 /* ErrorInfo.swift */; };
 		AF4968C724584EBB00188743 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968C624584EBB00188743 /* ApiError.swift */; };
+		AF4968C924584F3B00188743 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968C824584F3B00188743 /* NetworkManager.swift */; };
+		AF4968CB245899A000188743 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968CA245899A000188743 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		AF4968C124584E3E00188743 /* ResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
 		AF4968C424584E7A00188743 /* ErrorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInfo.swift; sourceTree = "<group>"; };
 		AF4968C624584EBB00188743 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		AF4968C824584F3B00188743 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AF4968CA245899A000188743 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 			children = (
 				AF4968B824584BF600188743 /* Album.swift */,
 				AF4968BA24584C0000188743 /* Photo.swift */,
+				AF4968CA245899A000188743 /* User.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 				AF4968BF24584DD800188743 /* Config.swift */,
 				AF4968BD24584DC900188743 /* Router.swift */,
 				AF4968C124584E3E00188743 /* ResponseValidator.swift */,
+				AF4968C824584F3B00188743 /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -240,8 +246,10 @@
 				AF4968BE24584DC900188743 /* Router.swift in Sources */,
 				AF4968C524584E7A00188743 /* ErrorInfo.swift in Sources */,
 				AF4968BB24584C0000188743 /* Photo.swift in Sources */,
+				AF4968C924584F3B00188743 /* NetworkManager.swift in Sources */,
 				AF4968C024584DD800188743 /* Config.swift in Sources */,
 				AF4968B124584AB900188743 /* UserCell.swift in Sources */,
+				AF4968CB245899A000188743 /* User.swift in Sources */,
 				AF4968C724584EBB00188743 /* ApiError.swift in Sources */,
 				AF49689224572A9300188743 /* AppDelegate.swift in Sources */,
 				AF4968C224584E3E00188743 /* ResponseValidator.swift in Sources */,
