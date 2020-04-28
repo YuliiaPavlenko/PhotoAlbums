@@ -24,6 +24,8 @@
 		AF4968C724584EBB00188743 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968C624584EBB00188743 /* ApiError.swift */; };
 		AF4968C924584F3B00188743 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968C824584F3B00188743 /* NetworkManager.swift */; };
 		AF4968CB245899A000188743 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968CA245899A000188743 /* User.swift */; };
+		AF4968CE24589E3700188743 /* ViewElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968CD24589E3700188743 /* ViewElements.swift */; };
+		AF4968D124589EDB00188743 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968D024589EDB00188743 /* UIView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		AF4968C624584EBB00188743 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		AF4968C824584F3B00188743 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AF4968CA245899A000188743 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AF4968CD24589E3700188743 /* ViewElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewElements.swift; sourceTree = "<group>"; };
+		AF4968D024589EDB00188743 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			children = (
 				AF4968B424584B9400188743 /* Data */,
 				AF4968A92458497700188743 /* UI */,
+				AF4968CF24589EB900188743 /* Utils */,
 				AF49689124572A9300188743 /* AppDelegate.swift */,
 				AF49689724572A9300188743 /* Main.storyboard */,
 				AF49689A24572A9600188743 /* Assets.xcassets */,
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				AF4968A52458493400188743 /* User */,
+				AF4968CC24589E1900188743 /* Common */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -170,6 +176,22 @@
 				AF4968C624584EBB00188743 /* ApiError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		AF4968CC24589E1900188743 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AF4968CD24589E3700188743 /* ViewElements.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AF4968CF24589EB900188743 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AF4968D024589EDB00188743 /* UIView+Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,9 +267,11 @@
 			files = (
 				AF4968BE24584DC900188743 /* Router.swift in Sources */,
 				AF4968C524584E7A00188743 /* ErrorInfo.swift in Sources */,
+				AF4968D124589EDB00188743 /* UIView+Utils.swift in Sources */,
 				AF4968BB24584C0000188743 /* Photo.swift in Sources */,
 				AF4968C924584F3B00188743 /* NetworkManager.swift in Sources */,
 				AF4968C024584DD800188743 /* Config.swift in Sources */,
+				AF4968CE24589E3700188743 /* ViewElements.swift in Sources */,
 				AF4968B124584AB900188743 /* UserCell.swift in Sources */,
 				AF4968CB245899A000188743 /* User.swift in Sources */,
 				AF4968C724584EBB00188743 /* ApiError.swift in Sources */,
