@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AF49689224572A9300188743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF49689124572A9300188743 /* AppDelegate.swift */; };
-		AF49689424572A9300188743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF49689324572A9300188743 /* SceneDelegate.swift */; };
-		AF49689624572A9300188743 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF49689524572A9300188743 /* ViewController.swift */; };
 		AF49689924572A9300188743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF49689724572A9300188743 /* Main.storyboard */; };
 		AF49689B24572A9600188743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF49689A24572A9600188743 /* Assets.xcassets */; };
 		AF49689E24572A9600188743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF49689C24572A9600188743 /* LaunchScreen.storyboard */; };
@@ -18,8 +16,6 @@
 /* Begin PBXFileReference section */
 		AF49688E24572A9300188743 /* PhotoAlbums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoAlbums.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF49689124572A9300188743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF49689324572A9300188743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AF49689524572A9300188743 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF49689824572A9300188743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF49689A24572A9600188743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF49689D24572A9600188743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,8 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				AF49689124572A9300188743 /* AppDelegate.swift */,
-				AF49689324572A9300188743 /* SceneDelegate.swift */,
-				AF49689524572A9300188743 /* ViewController.swift */,
 				AF49689724572A9300188743 /* Main.storyboard */,
 				AF49689A24572A9600188743 /* Assets.xcassets */,
 				AF49689C24572A9600188743 /* LaunchScreen.storyboard */,
@@ -138,9 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF49689624572A9300188743 /* ViewController.swift in Sources */,
 				AF49689224572A9300188743 /* AppDelegate.swift in Sources */,
-				AF49689424572A9300188743 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +208,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -293,7 +285,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yuliiapavlenko.PhotoAlbums;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yuliiapavlenko.PhotoAlbums;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
