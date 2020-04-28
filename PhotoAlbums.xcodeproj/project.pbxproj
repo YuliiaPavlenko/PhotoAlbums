@@ -17,6 +17,11 @@
 		AF4968B324584AD200188743 /* UsersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968B224584AD200188743 /* UsersListPresenter.swift */; };
 		AF4968B924584BF600188743 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968B824584BF600188743 /* Album.swift */; };
 		AF4968BB24584C0000188743 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968BA24584C0000188743 /* Photo.swift */; };
+		AF4968BE24584DC900188743 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968BD24584DC900188743 /* Router.swift */; };
+		AF4968C024584DD800188743 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968BF24584DD800188743 /* Config.swift */; };
+		AF4968C224584E3E00188743 /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968C124584E3E00188743 /* ResponseValidator.swift */; };
+		AF4968C524584E7A00188743 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968C424584E7A00188743 /* ErrorInfo.swift */; };
+		AF4968C724584EBB00188743 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968C624584EBB00188743 /* ApiError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		AF4968B224584AD200188743 /* UsersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListPresenter.swift; sourceTree = "<group>"; };
 		AF4968B824584BF600188743 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		AF4968BA24584C0000188743 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		AF4968BD24584DC900188743 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AF4968BF24584DD800188743 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		AF4968C124584E3E00188743 /* ResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
+		AF4968C424584E7A00188743 /* ErrorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInfo.swift; sourceTree = "<group>"; };
+		AF4968C624584EBB00188743 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +131,7 @@
 		AF4968B424584B9400188743 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AF4968BC24584DAE00188743 /* Networking */,
 				AF4968B524584BA200188743 /* DTO */,
 			);
 			path = Data;
@@ -133,6 +144,26 @@
 				AF4968BA24584C0000188743 /* Photo.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		AF4968BC24584DAE00188743 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AF4968C324584E5B00188743 /* Error */,
+				AF4968BF24584DD800188743 /* Config.swift */,
+				AF4968BD24584DC900188743 /* Router.swift */,
+				AF4968C124584E3E00188743 /* ResponseValidator.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AF4968C324584E5B00188743 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				AF4968C424584E7A00188743 /* ErrorInfo.swift */,
+				AF4968C624584EBB00188743 /* ApiError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,9 +237,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4968BE24584DC900188743 /* Router.swift in Sources */,
+				AF4968C524584E7A00188743 /* ErrorInfo.swift in Sources */,
 				AF4968BB24584C0000188743 /* Photo.swift in Sources */,
+				AF4968C024584DD800188743 /* Config.swift in Sources */,
 				AF4968B124584AB900188743 /* UserCell.swift in Sources */,
+				AF4968C724584EBB00188743 /* ApiError.swift in Sources */,
 				AF49689224572A9300188743 /* AppDelegate.swift in Sources */,
+				AF4968C224584E3E00188743 /* ResponseValidator.swift in Sources */,
 				AF4968AF24584AA800188743 /* UsersListVC.swift in Sources */,
 				AF4968B324584AD200188743 /* UsersListPresenter.swift in Sources */,
 				AF4968AB24584A7700188743 /* UsersListItem.swift in Sources */,
