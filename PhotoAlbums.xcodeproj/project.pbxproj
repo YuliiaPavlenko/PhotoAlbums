@@ -15,6 +15,8 @@
 		AF4968AF24584AA800188743 /* UsersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968AE24584AA800188743 /* UsersListVC.swift */; };
 		AF4968B124584AB900188743 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968B024584AB900188743 /* UserCell.swift */; };
 		AF4968B324584AD200188743 /* UsersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968B224584AD200188743 /* UsersListPresenter.swift */; };
+		AF4968B924584BF600188743 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968B824584BF600188743 /* Album.swift */; };
+		AF4968BB24584C0000188743 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968BA24584C0000188743 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AF4968AE24584AA800188743 /* UsersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListVC.swift; sourceTree = "<group>"; };
 		AF4968B024584AB900188743 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		AF4968B224584AD200188743 /* UsersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListPresenter.swift; sourceTree = "<group>"; };
+		AF4968B824584BF600188743 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		AF4968BA24584C0000188743 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		AF49689024572A9300188743 /* PhotoAlbums */ = {
 			isa = PBXGroup;
 			children = (
+				AF4968B424584B9400188743 /* Data */,
 				AF4968A92458497700188743 /* UI */,
 				AF49689124572A9300188743 /* AppDelegate.swift */,
 				AF49689724572A9300188743 /* Main.storyboard */,
@@ -111,6 +116,23 @@
 				AF4968A52458493400188743 /* User */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		AF4968B424584B9400188743 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AF4968B524584BA200188743 /* DTO */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AF4968B524584BA200188743 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				AF4968B824584BF600188743 /* Album.swift */,
+				AF4968BA24584C0000188743 /* Photo.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,11 +206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4968BB24584C0000188743 /* Photo.swift in Sources */,
 				AF4968B124584AB900188743 /* UserCell.swift in Sources */,
 				AF49689224572A9300188743 /* AppDelegate.swift in Sources */,
 				AF4968AF24584AA800188743 /* UsersListVC.swift in Sources */,
 				AF4968B324584AD200188743 /* UsersListPresenter.swift in Sources */,
 				AF4968AB24584A7700188743 /* UsersListItem.swift in Sources */,
+				AF4968B924584BF600188743 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
