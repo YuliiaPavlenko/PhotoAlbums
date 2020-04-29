@@ -28,9 +28,14 @@ class UsersListVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         userListPresenter.viewIsPrepared()
+        customizeNavigationBar(animated)
     }
 
     // MARK: - Custom Functions
+    func customizeNavigationBar(_ animated: Bool) {
+        title = "Users"
+    }
+    
     func setupTableView() {
         view.addSubview(tableView)
         configureConstraintsForTableView()
