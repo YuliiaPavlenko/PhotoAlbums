@@ -25,7 +25,7 @@ class UserCell: UITableViewCell {
     }
     
     fileprivate func configureConstraints() {
-        userNameLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 12, paddingLeft: 26, paddingBottom: 12, paddingRight: 26, width: 40, height: 0, enableInsets: false)
+        userNameLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 12, paddingLeft: 25, paddingBottom: 12, paddingRight: 25, width: 0, height: 0, enableInsets: false)
     }
     
     func configureWithUser(user: UsersListItem) {
