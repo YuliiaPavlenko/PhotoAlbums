@@ -105,6 +105,13 @@ extension UsersListVC: UsersListViewDelegate {
         }
     }
     
+    func showDownloadUserAlbumsDataError(withMessage: DisplayErrorModel) {
+        DispatchQueue.main.async {
+        let alert = CustomErrorAlert.setUpErrorAlert(withMessage)
+            self.present(alert, animated: true)
+        }
+    }
+    
     func showUserAlbums() {
         
     }

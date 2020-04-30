@@ -10,7 +10,7 @@ import UIKit
 
 protocol UsersListViewDelegate: class {
     func showUsers(_ users: [UsersListItem])
-//    func showDownloadUserAlbumsDataError(withMessage: DisplayErrorModel)
+    func showDownloadUserAlbumsDataError(withMessage: DisplayErrorModel)
     func showUserAlbums()
     func showProgress()
     func hideProgress()
@@ -51,7 +51,7 @@ class UsersListPresenter {
                 self.viewDelegate?.showUsers(self.usersList)
             } else {
                 if let error = error {
-
+                    self.viewDelegate?.showDownloadUserAlbumsDataError(withMessage: DisplayError.users.displayMessage(apiError: error))
                 }
             }
         }
