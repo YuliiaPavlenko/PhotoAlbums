@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class UsersListVC: UIViewController {
     
@@ -90,7 +91,10 @@ extension UsersListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension UsersListVC: UsersListViewDelegate {
@@ -106,14 +110,13 @@ extension UsersListVC: UsersListViewDelegate {
     }
     
     func showProgress() {
-        
+        HUD.show(.progress)
     }
-    
+
     func hideProgress() {
         DispatchQueue.main.async {
             self.refreshControl.endRefreshing()
+            HUD.hide()
         }
     }
-    
-    
 }
