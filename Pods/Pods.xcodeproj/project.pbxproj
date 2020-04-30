@@ -6,35 +6,61 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		0B08DFF991597B12F4B73F5E699BC130 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B92908380E0DB61A41D5336A45B /* Window.swift */; };
-		0D0FC5FCA5DC6851AA0674A0F436F75C /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485894332181578BABE289BE9B7FCFED /* HUD.swift */; };
-		14035A7A6B8A825357C702BBE6C8848C /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891F2AB8C0D158F7DEA314F2B1305892 /* WindowRootViewController.swift */; };
-		148F4A8D0E9317AF7E814A558AC16AA7 /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A01AFBE6B1890A1651BF31870F4B04 /* PKHUDWideBaseView.swift */; };
-		180A266E2AF087B3E947058335E89CE0 /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F292E4427A682F5EAD03C6ADD22BDC /* PKHUD.swift */; };
-		1F824E58DBB325F219AFB0C9451BE1C8 /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA80175BA226F1F53DA126AB9641ED /* PKHUDAssets.swift */; };
-		31F445BC870DC65B5DB15B8F51AE9E77 /* PKHUDRotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C291DAC1974EEBEC220FFEE1B3E00D1F /* PKHUDRotatingImageView.swift */; };
-		39A93C2CC130C7BBC883E0735F630671 /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B253ACC8393962059A7E9BD1A3E5CAB4 /* PKHUDSuccessView.swift */; };
-		3B5F5960E645010479960171E5DF17DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		446493C8F226FA8CC9D4D706486FA605 /* PKHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 01EED00663BE2AC5BBE4BFAABF1C370A /* PKHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54E7808DA4C495BFCA04EC8FA99EF06C /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F5290380EAE9D33A252743DB99E1A /* PKHUDProgressView.swift */; };
-		606FB101465BA0EC4F2ED1EDE8E152DD /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257B9EB5F9440A299C261854B5E7076 /* PKHUDAnimating.swift */; };
-		675EC1A032DFDD820264B3AE47B297C2 /* PKHUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950FA5B07CF0FC9A9D6A2E2BBB2FC7A8 /* PKHUDAnimation.swift */; };
+		0B08DFF991597B12F4B73F5E699BC130 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F750B81B3DE2CE00EC15AAAB222FCF /* Window.swift */; };
+		0D0FC5FCA5DC6851AA0674A0F436F75C /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D83DC4665AAA21F2F8141D9E065A2 /* HUD.swift */; };
+		0E43F9A04A262D3E69B3E1FD893297B5 /* Pods-PhotoAlbums-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4153AEDF9E5EA573AB7465EBABFF706 /* Pods-PhotoAlbums-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14035A7A6B8A825357C702BBE6C8848C /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30CAFC0903E7F6E60E7CC8CB5F4AFE /* WindowRootViewController.swift */; };
+		148F4A8D0E9317AF7E814A558AC16AA7 /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C615762233A52A1ECFE47A32DD3134 /* PKHUDWideBaseView.swift */; };
+		180A266E2AF087B3E947058335E89CE0 /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782DB1DA8AD9E2A1242BADB3F93FE68 /* PKHUD.swift */; };
+		1F824E58DBB325F219AFB0C9451BE1C8 /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F970B32DED91D521582656060C7483 /* PKHUDAssets.swift */; };
+		31F445BC870DC65B5DB15B8F51AE9E77 /* PKHUDRotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBECDAF9FE11B9E5CA5F87F63C92FE0 /* PKHUDRotatingImageView.swift */; };
+		39A93C2CC130C7BBC883E0735F630671 /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA951A12518C2B3188D0755DE4FB817 /* PKHUDSuccessView.swift */; };
+		3E0175A86146812B3B4DFB851EFFD9F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		446493C8F226FA8CC9D4D706486FA605 /* PKHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DDAA92C242F72E88A88D23AD06F7B72 /* PKHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54E7808DA4C495BFCA04EC8FA99EF06C /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C0B5D164D8534451B4D14AC4AE944 /* PKHUDProgressView.swift */; };
+		606FB101465BA0EC4F2ED1EDE8E152DD /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EF08262B38998B574787AC4624B2B2 /* PKHUDAnimating.swift */; };
+		675EC1A032DFDD820264B3AE47B297C2 /* PKHUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE9023CC68D5C5837E0BE00B6542A5B /* PKHUDAnimation.swift */; };
 		771FF27CF9018A865BE6AA1C8FDD0646 /* PKHUDResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BFCB2D5C605270A32522299AED3B5AE6 /* PKHUDResources.bundle */; };
-		9432D6D1CE40B94ACC42309A46DA4C4B /* PKHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC15CBBC00A94E7681D7B111C03AD2FF /* PKHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C4229D5D1B5FC7606ECC49F776E64CD /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD7CD9F1ECD9A9787B99B57DAF52164 /* PKHUDSquareBaseView.swift */; };
-		A8EA6E398B7FC737D0D92A533D7677E5 /* PKHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D14A5B0BF5C6276CA52D9800E167840 /* PKHUD-dummy.m */; };
-		A98A8597B3FED74DEDE207163AE0565C /* Pods-PhotoAlbums-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4153AEDF9E5EA573AB7465EBABFF706 /* Pods-PhotoAlbums-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DAEC01082CFADAE7A63A522EEAF35801 /* Pods-PhotoAlbums-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D146AA5AB2F92C8274B6BE0CA00B2B47 /* Pods-PhotoAlbums-dummy.m */; };
-		DB20EB5F12F78130500E8683C2214E11 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCC2E42343B89CFC16C3F22634BAC1 /* FrameView.swift */; };
-		E2A38E421D16111E6DE45070BA0F0A7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F0C5D6A17ADB2E1106683E77A633A6 /* Images.xcassets */; };
-		E84C1832305BF7AA61C2E6F99C7369C0 /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575C3477BC211FF6FC7FBE3843E5751F /* PKHUDSystemActivityIndicatorView.swift */; };
-		EF50980DA05BC44D9725C5702FDDD669 /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530C736625632CF26EE9A5072F0B9DB /* PKHUDErrorView.swift */; };
-		F2CC01B79708C6CC4DEA8FD3B308C4F7 /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC3A6A740C7BE2BB84C3C0E9DAAF6C /* PKHUDTextView.swift */; };
+		9432D6D1CE40B94ACC42309A46DA4C4B /* PKHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7DF2EB2FDCBAF492AA3134FAB5AACE0 /* PKHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C4229D5D1B5FC7606ECC49F776E64CD /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0BCD785C48A230BB21B1EB5AD53CD1 /* PKHUDSquareBaseView.swift */; };
+		A8EA6E398B7FC737D0D92A533D7677E5 /* PKHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2CC86B7873C910DD2D0CCB9108A0E /* PKHUD-dummy.m */; };
+		DB20EB5F12F78130500E8683C2214E11 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505B7348304BEBC5840E0A87A48F8DE /* FrameView.swift */; };
+		E2A38E421D16111E6DE45070BA0F0A7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3181F44B884A1F54618F1EFE01DA18 /* Images.xcassets */; };
+		E46875D859ABC58F2B9905FA6AF99215 /* Pods-PhotoAlbums-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D146AA5AB2F92C8274B6BE0CA00B2B47 /* Pods-PhotoAlbums-dummy.m */; };
+		E84C1832305BF7AA61C2E6F99C7369C0 /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3ED18B87772589E884C2FA9EA71FE6 /* PKHUDSystemActivityIndicatorView.swift */; };
+		EF50980DA05BC44D9725C5702FDDD669 /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF13C531DA044DF5EC3902368073E970 /* PKHUDErrorView.swift */; };
+		F2CC01B79708C6CC4DEA8FD3B308C4F7 /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8AEDEB1DB4051D1083ADE8A813979 /* PKHUDTextView.swift */; };
 		F786D1942BEC12F8EE5AC6B9DA1A5520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4CBA15BB2B3807020E0B4A63987838A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 364873017BA37260EF589D44B6B73D21;
+			remoteInfo = PKHUD;
+		};
+		779C00C8EFF3479254FE5C1A37A01188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
 		C7E4FF5E720A8106ADD14262653F5F38 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -42,66 +68,52 @@
 			remoteGlobalIDString = A7F7332F1050B42A501616421AC869EB;
 			remoteInfo = "PKHUD-PKHUDResources";
 		};
-		CE4481874BE5AD25CFBEE9D7A18CD646 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 364873017BA37260EF589D44B6B73D21;
-			remoteInfo = PKHUD;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01EED00663BE2AC5BBE4BFAABF1C370A /* PKHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKHUD.h; path = PKHUD/PKHUD.h; sourceTree = "<group>"; };
-		04574B92908380E0DB61A41D5336A45B /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = PKHUD/Window.swift; sourceTree = "<group>"; };
+		01C615762233A52A1ECFE47A32DD3134 /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDWideBaseView.swift; path = PKHUD/PKHUDWideBaseView.swift; sourceTree = "<group>"; };
+		0420330A54C0A7AE3892F85A40B651D8 /* ResourceBundle-PKHUDResources-PKHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PKHUDResources-PKHUD-Info.plist"; sourceTree = "<group>"; };
 		05A2656F46E8CA87E77A035911B33D10 /* PKHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PKHUD.framework; path = PKHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05E7597A2E6A8648CB0C046C915134F3 /* PKHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PKHUD.modulemap; sourceTree = "<group>"; };
 		18EBF91F1565FF7A56E351F1D3F1E880 /* Pods-PhotoAlbums-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhotoAlbums-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1EA951A12518C2B3188D0755DE4FB817 /* PKHUDSuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSuccessView.swift; path = PKHUD/PKHUDSuccessView.swift; sourceTree = "<group>"; };
 		2229057FCBA56251E9251B0EA0EEE100 /* Pods_PhotoAlbums.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PhotoAlbums.framework; path = "Pods-PhotoAlbums.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		27F292E4427A682F5EAD03C6ADD22BDC /* PKHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUD.swift; path = PKHUD/PKHUD.swift; sourceTree = "<group>"; };
-		2DBCC2E42343B89CFC16C3F22634BAC1 /* FrameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameView.swift; path = PKHUD/FrameView.swift; sourceTree = "<group>"; };
+		2782DB1DA8AD9E2A1242BADB3F93FE68 /* PKHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUD.swift; path = PKHUD/PKHUD.swift; sourceTree = "<group>"; };
+		27F970B32DED91D521582656060C7483 /* PKHUDAssets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAssets.swift; path = PKHUD/PKHUDAssets.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3DD7CD9F1ECD9A9787B99B57DAF52164 /* PKHUDSquareBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSquareBaseView.swift; path = PKHUD/PKHUDSquareBaseView.swift; sourceTree = "<group>"; };
-		45F0C5D6A17ADB2E1106683E77A633A6 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PKHUD/Images.xcassets; sourceTree = "<group>"; };
-		485894332181578BABE289BE9B7FCFED /* HUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HUD.swift; path = PKHUD/HUD.swift; sourceTree = "<group>"; };
+		33A8AEDEB1DB4051D1083ADE8A813979 /* PKHUDTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDTextView.swift; path = PKHUD/PKHUDTextView.swift; sourceTree = "<group>"; };
+		3B3ED18B87772589E884C2FA9EA71FE6 /* PKHUDSystemActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSystemActivityIndicatorView.swift; path = PKHUD/PKHUDSystemActivityIndicatorView.swift; sourceTree = "<group>"; };
+		4B0BCD785C48A230BB21B1EB5AD53CD1 /* PKHUDSquareBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSquareBaseView.swift; path = PKHUD/PKHUDSquareBaseView.swift; sourceTree = "<group>"; };
 		535D8A7FED424B5EB6DC9EB858206FEF /* Pods-PhotoAlbums.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoAlbums.release.xcconfig"; sourceTree = "<group>"; };
-		575C3477BC211FF6FC7FBE3843E5751F /* PKHUDSystemActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSystemActivityIndicatorView.swift; path = PKHUD/PKHUDSystemActivityIndicatorView.swift; sourceTree = "<group>"; };
-		5AB4A734F5E51A056EE9F54321B5F486 /* PKHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-prefix.pch"; sourceTree = "<group>"; };
+		5505B7348304BEBC5840E0A87A48F8DE /* FrameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameView.swift; path = PKHUD/FrameView.swift; sourceTree = "<group>"; };
 		62F172A293C1EF3604A8BFA09971BCF8 /* Pods-PhotoAlbums-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoAlbums-frameworks.sh"; sourceTree = "<group>"; };
-		7257B9EB5F9440A299C261854B5E7076 /* PKHUDAnimating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAnimating.swift; path = PKHUD/PKHUDAnimating.swift; sourceTree = "<group>"; };
-		72FC3A6A740C7BE2BB84C3C0E9DAAF6C /* PKHUDTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDTextView.swift; path = PKHUD/PKHUDTextView.swift; sourceTree = "<group>"; };
-		7522C0D1FA21E520EBAC8CB85E550635 /* PKHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PKHUD.modulemap; sourceTree = "<group>"; };
-		76A01AFBE6B1890A1651BF31870F4B04 /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDWideBaseView.swift; path = PKHUD/PKHUDWideBaseView.swift; sourceTree = "<group>"; };
+		6D30CAFC0903E7F6E60E7CC8CB5F4AFE /* WindowRootViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WindowRootViewController.swift; path = PKHUD/WindowRootViewController.swift; sourceTree = "<group>"; };
+		70F750B81B3DE2CE00EC15AAAB222FCF /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = PKHUD/Window.swift; sourceTree = "<group>"; };
+		7EBECDAF9FE11B9E5CA5F87F63C92FE0 /* PKHUDRotatingImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDRotatingImageView.swift; path = PKHUD/PKHUDRotatingImageView.swift; sourceTree = "<group>"; };
 		812BAFBB26082B919EAE462F1A4D6FA1 /* Pods-PhotoAlbums.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PhotoAlbums.modulemap"; sourceTree = "<group>"; };
-		840F5290380EAE9D33A252743DB99E1A /* PKHUDProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDProgressView.swift; path = PKHUD/PKHUDProgressView.swift; sourceTree = "<group>"; };
-		847B0F8538AA0D1EEE4072ECAF146674 /* PKHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKHUD.xcconfig; sourceTree = "<group>"; };
-		891F2AB8C0D158F7DEA314F2B1305892 /* WindowRootViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WindowRootViewController.swift; path = PKHUD/WindowRootViewController.swift; sourceTree = "<group>"; };
-		950FA5B07CF0FC9A9D6A2E2BBB2FC7A8 /* PKHUDAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAnimation.swift; path = PKHUD/PKHUDAnimation.swift; sourceTree = "<group>"; };
-		97BA80175BA226F1F53DA126AB9641ED /* PKHUDAssets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAssets.swift; path = PKHUD/PKHUDAssets.swift; sourceTree = "<group>"; };
-		9D14A5B0BF5C6276CA52D9800E167840 /* PKHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKHUD-dummy.m"; sourceTree = "<group>"; };
+		8DDAA92C242F72E88A88D23AD06F7B72 /* PKHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKHUD.h; path = PKHUD/PKHUD.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B253ACC8393962059A7E9BD1A3E5CAB4 /* PKHUDSuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSuccessView.swift; path = PKHUD/PKHUDSuccessView.swift; sourceTree = "<group>"; };
-		B40DBF84F346F42EF59E82B313051BCE /* PKHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PKHUD-Info.plist"; sourceTree = "<group>"; };
+		9EA2CC86B7873C910DD2D0CCB9108A0E /* PKHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKHUD-dummy.m"; sourceTree = "<group>"; };
+		A25E9114B56DB74FD14D1AE9950FB6B2 /* SwiftLint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.xcconfig; sourceTree = "<group>"; };
+		B7DF2EB2FDCBAF492AA3134FAB5AACE0 /* PKHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-umbrella.h"; sourceTree = "<group>"; };
 		B8F869C380A3B332F0DD137D76AA74DF /* Pods-PhotoAlbums-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhotoAlbums-acknowledgements.plist"; sourceTree = "<group>"; };
 		BFCB2D5C605270A32522299AED3B5AE6 /* PKHUDResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PKHUDResources.bundle; path = "PKHUD-PKHUDResources.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01801B0EA4A6DECB972EB1EA136F84C /* Pods-PhotoAlbums-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhotoAlbums-Info.plist"; sourceTree = "<group>"; };
-		C291DAC1974EEBEC220FFEE1B3E00D1F /* PKHUDRotatingImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDRotatingImageView.swift; path = PKHUD/PKHUDRotatingImageView.swift; sourceTree = "<group>"; };
 		C4153AEDF9E5EA573AB7465EBABFF706 /* Pods-PhotoAlbums-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhotoAlbums-umbrella.h"; sourceTree = "<group>"; };
+		CAB1781C5DFE942304B650CBAA99EC52 /* PKHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKHUD.xcconfig; sourceTree = "<group>"; };
 		CBDA2A9433F9CDD86ED6CBBEE2E76D33 /* Pods-PhotoAlbums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoAlbums.debug.xcconfig"; sourceTree = "<group>"; };
+		CD0D83DC4665AAA21F2F8141D9E065A2 /* HUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HUD.swift; path = PKHUD/HUD.swift; sourceTree = "<group>"; };
 		D146AA5AB2F92C8274B6BE0CA00B2B47 /* Pods-PhotoAlbums-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhotoAlbums-dummy.m"; sourceTree = "<group>"; };
-		DC15CBBC00A94E7681D7B111C03AD2FF /* PKHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-umbrella.h"; sourceTree = "<group>"; };
-		E530C736625632CF26EE9A5072F0B9DB /* PKHUDErrorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDErrorView.swift; path = PKHUD/PKHUDErrorView.swift; sourceTree = "<group>"; };
-		E9E09A13157FC667EA9B4894D9E6C7A7 /* ResourceBundle-PKHUDResources-PKHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PKHUDResources-PKHUD-Info.plist"; sourceTree = "<group>"; };
+		DF13C531DA044DF5EC3902368073E970 /* PKHUDErrorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDErrorView.swift; path = PKHUD/PKHUDErrorView.swift; sourceTree = "<group>"; };
+		E97C0B5D164D8534451B4D14AC4AE944 /* PKHUDProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDProgressView.swift; path = PKHUD/PKHUDProgressView.swift; sourceTree = "<group>"; };
+		E9EF08262B38998B574787AC4624B2B2 /* PKHUDAnimating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAnimating.swift; path = PKHUD/PKHUDAnimating.swift; sourceTree = "<group>"; };
+		F4BFEF81174F3FF2C325CF9CD2DE8B14 /* PKHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-prefix.pch"; sourceTree = "<group>"; };
+		F5F719DD104A660B75642A835803BDD9 /* PKHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PKHUD-Info.plist"; sourceTree = "<group>"; };
+		FAE9023CC68D5C5837E0BE00B6542A5B /* PKHUDAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAnimation.swift; path = PKHUD/PKHUDAnimation.swift; sourceTree = "<group>"; };
+		FF3181F44B884A1F54618F1EFE01DA18 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PKHUD/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0E7D9DA180F87695DF3248DC3481825D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B5F5960E645010479960171E5DF17DB /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5965CA0EC8E5353EE2EEBE4B07D4C053 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -117,15 +129,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84E397E133579858B2D00D799589C1FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E0175A86146812B3B4DFB851EFFD9F4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04ABCDDE2648A1C775D487595DB8D7EC /* Pods */ = {
+		1D017B39C9832C9F5976180DAD3EB56E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4A34416481A0F2101A772B831C341DF5 /* PKHUD */,
+				FF3181F44B884A1F54618F1EFE01DA18 /* Images.xcassets */,
 			);
-			name = Pods;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		4290EC22A56A2AFB9AB3959AC67D70FD /* Pods-PhotoAlbums */ = {
@@ -145,54 +165,64 @@
 			path = "Target Support Files/Pods-PhotoAlbums";
 			sourceTree = "<group>";
 		};
-		4A34416481A0F2101A772B831C341DF5 /* PKHUD */ = {
+		8005FF3E78265C68C10B209AED013E95 /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
-				2DBCC2E42343B89CFC16C3F22634BAC1 /* FrameView.swift */,
-				485894332181578BABE289BE9B7FCFED /* HUD.swift */,
-				01EED00663BE2AC5BBE4BFAABF1C370A /* PKHUD.h */,
-				27F292E4427A682F5EAD03C6ADD22BDC /* PKHUD.swift */,
-				7257B9EB5F9440A299C261854B5E7076 /* PKHUDAnimating.swift */,
-				950FA5B07CF0FC9A9D6A2E2BBB2FC7A8 /* PKHUDAnimation.swift */,
-				97BA80175BA226F1F53DA126AB9641ED /* PKHUDAssets.swift */,
-				E530C736625632CF26EE9A5072F0B9DB /* PKHUDErrorView.swift */,
-				840F5290380EAE9D33A252743DB99E1A /* PKHUDProgressView.swift */,
-				C291DAC1974EEBEC220FFEE1B3E00D1F /* PKHUDRotatingImageView.swift */,
-				3DD7CD9F1ECD9A9787B99B57DAF52164 /* PKHUDSquareBaseView.swift */,
-				B253ACC8393962059A7E9BD1A3E5CAB4 /* PKHUDSuccessView.swift */,
-				575C3477BC211FF6FC7FBE3843E5751F /* PKHUDSystemActivityIndicatorView.swift */,
-				72FC3A6A740C7BE2BB84C3C0E9DAAF6C /* PKHUDTextView.swift */,
-				76A01AFBE6B1890A1651BF31870F4B04 /* PKHUDWideBaseView.swift */,
-				04574B92908380E0DB61A41D5336A45B /* Window.swift */,
-				891F2AB8C0D158F7DEA314F2B1305892 /* WindowRootViewController.swift */,
-				64FF4557CD17C534DEA2098A5801B496 /* Resources */,
-				64E5D1FAD700BD8CB75C2334D39C334B /* Support Files */,
+				B6B95496C4E5C853BADA9AA275CFAC07 /* Support Files */,
 			);
-			name = PKHUD;
-			path = PKHUD;
+			name = SwiftLint;
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
-		64E5D1FAD700BD8CB75C2334D39C334B /* Support Files */ = {
+		94BD327B64F59416F678A262AE02D32B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7522C0D1FA21E520EBAC8CB85E550635 /* PKHUD.modulemap */,
-				847B0F8538AA0D1EEE4072ECAF146674 /* PKHUD.xcconfig */,
-				9D14A5B0BF5C6276CA52D9800E167840 /* PKHUD-dummy.m */,
-				B40DBF84F346F42EF59E82B313051BCE /* PKHUD-Info.plist */,
-				5AB4A734F5E51A056EE9F54321B5F486 /* PKHUD-prefix.pch */,
-				DC15CBBC00A94E7681D7B111C03AD2FF /* PKHUD-umbrella.h */,
-				E9E09A13157FC667EA9B4894D9E6C7A7 /* ResourceBundle-PKHUDResources-PKHUD-Info.plist */,
+				05E7597A2E6A8648CB0C046C915134F3 /* PKHUD.modulemap */,
+				CAB1781C5DFE942304B650CBAA99EC52 /* PKHUD.xcconfig */,
+				9EA2CC86B7873C910DD2D0CCB9108A0E /* PKHUD-dummy.m */,
+				F5F719DD104A660B75642A835803BDD9 /* PKHUD-Info.plist */,
+				F4BFEF81174F3FF2C325CF9CD2DE8B14 /* PKHUD-prefix.pch */,
+				B7DF2EB2FDCBAF492AA3134FAB5AACE0 /* PKHUD-umbrella.h */,
+				0420330A54C0A7AE3892F85A40B651D8 /* ResourceBundle-PKHUDResources-PKHUD-Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/PKHUD";
 			sourceTree = "<group>";
 		};
-		64FF4557CD17C534DEA2098A5801B496 /* Resources */ = {
+		AD3FD4408E2B2B707A4BDE33D6B1991A /* PKHUD */ = {
 			isa = PBXGroup;
 			children = (
-				45F0C5D6A17ADB2E1106683E77A633A6 /* Images.xcassets */,
+				5505B7348304BEBC5840E0A87A48F8DE /* FrameView.swift */,
+				CD0D83DC4665AAA21F2F8141D9E065A2 /* HUD.swift */,
+				8DDAA92C242F72E88A88D23AD06F7B72 /* PKHUD.h */,
+				2782DB1DA8AD9E2A1242BADB3F93FE68 /* PKHUD.swift */,
+				E9EF08262B38998B574787AC4624B2B2 /* PKHUDAnimating.swift */,
+				FAE9023CC68D5C5837E0BE00B6542A5B /* PKHUDAnimation.swift */,
+				27F970B32DED91D521582656060C7483 /* PKHUDAssets.swift */,
+				DF13C531DA044DF5EC3902368073E970 /* PKHUDErrorView.swift */,
+				E97C0B5D164D8534451B4D14AC4AE944 /* PKHUDProgressView.swift */,
+				7EBECDAF9FE11B9E5CA5F87F63C92FE0 /* PKHUDRotatingImageView.swift */,
+				4B0BCD785C48A230BB21B1EB5AD53CD1 /* PKHUDSquareBaseView.swift */,
+				1EA951A12518C2B3188D0755DE4FB817 /* PKHUDSuccessView.swift */,
+				3B3ED18B87772589E884C2FA9EA71FE6 /* PKHUDSystemActivityIndicatorView.swift */,
+				33A8AEDEB1DB4051D1083ADE8A813979 /* PKHUDTextView.swift */,
+				01C615762233A52A1ECFE47A32DD3134 /* PKHUDWideBaseView.swift */,
+				70F750B81B3DE2CE00EC15AAAB222FCF /* Window.swift */,
+				6D30CAFC0903E7F6E60E7CC8CB5F4AFE /* WindowRootViewController.swift */,
+				1D017B39C9832C9F5976180DAD3EB56E /* Resources */,
+				94BD327B64F59416F678A262AE02D32B /* Support Files */,
 			);
-			name = Resources;
+			name = PKHUD;
+			path = PKHUD;
+			sourceTree = "<group>";
+		};
+		B6B95496C4E5C853BADA9AA275CFAC07 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A25E9114B56DB74FD14D1AE9950FB6B2 /* SwiftLint.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -216,7 +246,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				04ABCDDE2648A1C775D487595DB8D7EC /* Pods */,
+				FC088861E3EE75EF7F04034C6DBE4F7E /* Pods */,
 				F6EAAC3FE337ED61A4E64363F3B69FFD /* Products */,
 				C38C908AE417EF83165CF327C08448F2 /* Targets Support Files */,
 			);
@@ -240,14 +270,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		FC088861E3EE75EF7F04034C6DBE4F7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD3FD4408E2B2B707A4BDE33D6B1991A /* PKHUD */,
+				8005FF3E78265C68C10B209AED013E95 /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		57E93538BC38DE652164C4AB19248428 /* Headers */ = {
+		8DAD7290FA85725541EE4336C98E54E3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A98A8597B3FED74DEDE207163AE0565C /* Pods-PhotoAlbums-umbrella.h in Headers */,
+				0E43F9A04A262D3E69B3E1FD893297B5 /* Pods-PhotoAlbums-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,17 +323,18 @@
 		};
 		3EBEAC5B2A4F66216BFBA2A35D35AEDC /* Pods-PhotoAlbums */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA625EC6DF502A9DA14FFA26F224AAA0 /* Build configuration list for PBXNativeTarget "Pods-PhotoAlbums" */;
+			buildConfigurationList = 3C50A412338FBA8BA8FA12813AC2FE69 /* Build configuration list for PBXNativeTarget "Pods-PhotoAlbums" */;
 			buildPhases = (
-				57E93538BC38DE652164C4AB19248428 /* Headers */,
-				47BAFE777F248BBE699F07F475DAD1D5 /* Sources */,
-				0E7D9DA180F87695DF3248DC3481825D /* Frameworks */,
-				9A34A7D1BFF7B425057A6ABB82032B53 /* Resources */,
+				8DAD7290FA85725541EE4336C98E54E3 /* Headers */,
+				5CBB29066304D0362FC1297365C91DD1 /* Sources */,
+				84E397E133579858B2D00D799589C1FC /* Frameworks */,
+				BAEA45A76BFAFE9D0225D27CCAFA064F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				400561D1552B468BF0E3E1482EB94E16 /* PBXTargetDependency */,
+				4A3C201C99AA85CD6F30EAD4412E69A3 /* PBXTargetDependency */,
+				DC5F674B8F66E76AFC89551B7422F3D6 /* PBXTargetDependency */,
 			);
 			name = "Pods-PhotoAlbums";
 			productName = "Pods-PhotoAlbums";
@@ -342,6 +382,7 @@
 				364873017BA37260EF589D44B6B73D21 /* PKHUD */,
 				A7F7332F1050B42A501616421AC869EB /* PKHUD-PKHUDResources */,
 				3EBEAC5B2A4F66216BFBA2A35D35AEDC /* Pods-PhotoAlbums */,
+				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
@@ -363,7 +404,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9A34A7D1BFF7B425057A6ABB82032B53 /* Resources */ = {
+		BAEA45A76BFAFE9D0225D27CCAFA064F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,11 +421,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		47BAFE777F248BBE699F07F475DAD1D5 /* Sources */ = {
+		5CBB29066304D0362FC1297365C91DD1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAEC01082CFADAE7A63A522EEAF35801 /* Pods-PhotoAlbums-dummy.m in Sources */,
+				E46875D859ABC58F2B9905FA6AF99215 /* Pods-PhotoAlbums-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,15 +462,59 @@
 			target = A7F7332F1050B42A501616421AC869EB /* PKHUD-PKHUDResources */;
 			targetProxy = C7E4FF5E720A8106ADD14262653F5F38 /* PBXContainerItemProxy */;
 		};
-		400561D1552B468BF0E3E1482EB94E16 /* PBXTargetDependency */ = {
+		4A3C201C99AA85CD6F30EAD4412E69A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PKHUD;
 			target = 364873017BA37260EF589D44B6B73D21 /* PKHUD */;
-			targetProxy = CE4481874BE5AD25CFBEE9D7A18CD646 /* PBXContainerItemProxy */;
+			targetProxy = 4CBA15BB2B3807020E0B4A63987838A2 /* PBXContainerItemProxy */;
+		};
+		DC5F674B8F66E76AFC89551B7422F3D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 779C00C8EFF3479254FE5C1A37A01188 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1B0EE09C0F11CA3ABE6577F911B40011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBDA2A9433F9CDD86ED6CBBEE2E76D33 /* Pods-PhotoAlbums.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PhotoAlbums/Pods-PhotoAlbums-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhotoAlbums/Pods-PhotoAlbums.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		257497152829C177993B5EC99C1D227A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -492,7 +577,7 @@
 		};
 		40D8791AAF7E6145E7C04E76C2012795 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 847B0F8538AA0D1EEE4072ECAF146674 /* PKHUD.xcconfig */;
+			baseConfigurationReference = CAB1781C5DFE942304B650CBAA99EC52 /* PKHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -528,7 +613,7 @@
 		};
 		727361D5B92309F740C969CDF25CEEA9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 847B0F8538AA0D1EEE4072ECAF146674 /* PKHUD.xcconfig */;
+			baseConfigurationReference = CAB1781C5DFE942304B650CBAA99EC52 /* PKHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PKHUD";
@@ -543,80 +628,7 @@
 			};
 			name = Release;
 		};
-		88A485DEC461FCE5325CA6DC12B3625C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBDA2A9433F9CDD86ED6CBBEE2E76D33 /* Pods-PhotoAlbums.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PhotoAlbums/Pods-PhotoAlbums-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PhotoAlbums/Pods-PhotoAlbums.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		971B22701E26CA9F298D2B6FD26C44C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 847B0F8538AA0D1EEE4072ECAF146674 /* PKHUD.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PKHUD/PKHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PKHUD/PKHUD-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/PKHUD/PKHUD.modulemap";
-				PRODUCT_MODULE_NAME = PKHUD;
-				PRODUCT_NAME = PKHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A84AA74CA28EB3B57DC9925B4ABF7F3E /* Release */ = {
+		78D36064663237F4B10799DA421FEA3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 535D8A7FED424B5EB6DC9EB858206FEF /* Pods-PhotoAlbums.release.xcconfig */;
 			buildSettings = {
@@ -654,6 +666,58 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		84D7C4574E8F0F3095623F0E06F5B402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A25E9114B56DB74FD14D1AE9950FB6B2 /* SwiftLint.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		971B22701E26CA9F298D2B6FD26C44C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAB1781C5DFE942304B650CBAA99EC52 /* PKHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PKHUD/PKHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKHUD/PKHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PKHUD/PKHUD.modulemap";
+				PRODUCT_MODULE_NAME = PKHUD;
+				PRODUCT_NAME = PKHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -719,9 +783,25 @@
 			};
 			name = Debug;
 		};
+		DEED47E09AF743F48544C1C4FEADEF47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A25E9114B56DB74FD14D1AE9950FB6B2 /* SwiftLint.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		DF9941529A0A18DB65C9E210EA3C4F00 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 847B0F8538AA0D1EEE4072ECAF146674 /* PKHUD.xcconfig */;
+			baseConfigurationReference = CAB1781C5DFE942304B650CBAA99EC52 /* PKHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PKHUD";
@@ -748,6 +828,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3C50A412338FBA8BA8FA12813AC2FE69 /* Build configuration list for PBXNativeTarget "Pods-PhotoAlbums" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B0EE09C0F11CA3ABE6577F911B40011 /* Debug */,
+				78D36064663237F4B10799DA421FEA3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -757,11 +846,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA625EC6DF502A9DA14FFA26F224AAA0 /* Build configuration list for PBXNativeTarget "Pods-PhotoAlbums" */ = {
+		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				88A485DEC461FCE5325CA6DC12B3625C /* Debug */,
-				A84AA74CA28EB3B57DC9925B4ABF7F3E /* Release */,
+				DEED47E09AF743F48544C1C4FEADEF47 /* Debug */,
+				84D7C4574E8F0F3095623F0E06F5B402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
