@@ -26,6 +26,7 @@
 		AF4968CB245899A000188743 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968CA245899A000188743 /* User.swift */; };
 		AF4968CE24589E3700188743 /* ViewElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968CD24589E3700188743 /* ViewElements.swift */; };
 		AF4968D124589EDB00188743 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968D024589EDB00188743 /* UIView+Utils.swift */; };
+		AF4968D32459E64100188743 /* DisplayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968D22459E64100188743 /* DisplayError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		AF4968CA245899A000188743 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF4968CD24589E3700188743 /* ViewElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewElements.swift; sourceTree = "<group>"; };
 		AF4968D024589EDB00188743 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		AF4968D22459E64100188743 /* DisplayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			children = (
 				AF4968C424584E7A00188743 /* ErrorInfo.swift */,
 				AF4968C624584EBB00188743 /* ApiError.swift */,
+				AF4968D22459E64100188743 /* DisplayError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				AF4968D124589EDB00188743 /* UIView+Utils.swift in Sources */,
 				AF4968BB24584C0000188743 /* Photo.swift in Sources */,
 				AF4968C924584F3B00188743 /* NetworkManager.swift in Sources */,
+				AF4968D32459E64100188743 /* DisplayError.swift in Sources */,
 				AF4968C024584DD800188743 /* Config.swift in Sources */,
 				AF4968CE24589E3700188743 /* ViewElements.swift in Sources */,
 				AF4968B124584AB900188743 /* UserCell.swift in Sources */,
