@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,7 @@
 		AF4968CE24589E3700188743 /* ViewElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968CD24589E3700188743 /* ViewElements.swift */; };
 		AF4968D124589EDB00188743 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968D024589EDB00188743 /* UIView+Utils.swift */; };
 		AF4968D32459E64100188743 /* DisplayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968D22459E64100188743 /* DisplayError.swift */; };
+		AF4968D5245AFD0000188743 /* CustomErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968D4245AFD0000188743 /* CustomErrorAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		AF4968CD24589E3700188743 /* ViewElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewElements.swift; sourceTree = "<group>"; };
 		AF4968D024589EDB00188743 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		AF4968D22459E64100188743 /* DisplayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayError.swift; sourceTree = "<group>"; };
+		AF4968D4245AFD0000188743 /* CustomErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorAlert.swift; sourceTree = "<group>"; };
 		DDCADEBEA7E9E33C160E2FE2 /* Pods-PhotoAlbums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbums.debug.xcconfig"; path = "Target Support Files/Pods-PhotoAlbums/Pods-PhotoAlbums.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +78,6 @@
 				DDCADEBEA7E9E33C160E2FE2 /* Pods-PhotoAlbums.debug.xcconfig */,
 				4EB0FE35A2AA11D366CA6594 /* Pods-PhotoAlbums.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				AF4968CD24589E3700188743 /* ViewElements.swift */,
+				AF4968D4245AFD0000188743 /* CustomErrorAlert.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -353,6 +355,7 @@
 				AF4968AF24584AA800188743 /* UsersListVC.swift in Sources */,
 				AF4968B324584AD200188743 /* UsersListPresenter.swift in Sources */,
 				AF4968AB24584A7700188743 /* UsersListItem.swift in Sources */,
+				AF4968D5245AFD0000188743 /* CustomErrorAlert.swift in Sources */,
 				AF4968B924584BF600188743 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
