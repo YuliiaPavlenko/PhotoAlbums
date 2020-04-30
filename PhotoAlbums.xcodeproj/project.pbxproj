@@ -161,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				AF4968A52458493400188743 /* User */,
+				AF4968D6245AFDBD00188743 /* Album */,
 				AF4968CC24589E1900188743 /* Common */,
 			);
 			path = UI;
@@ -222,6 +223,37 @@
 				AF4968D024589EDB00188743 /* UIView+Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		AF4968D6245AFDBD00188743 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				AF4968D9245AFDE800188743 /* Model */,
+				AF4968D8245AFDE000188743 /* View */,
+				AF4968D7245AFDD300188743 /* Presenter */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		AF4968D7245AFDD300188743 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AF4968D8245AFDE000188743 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF4968D9245AFDE800188743 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
