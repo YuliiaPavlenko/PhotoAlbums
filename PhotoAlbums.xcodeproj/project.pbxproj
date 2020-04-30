@@ -29,6 +29,7 @@
 		AF4968D124589EDB00188743 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968D024589EDB00188743 /* UIView+Utils.swift */; };
 		AF4968D32459E64100188743 /* DisplayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968D22459E64100188743 /* DisplayError.swift */; };
 		AF4968D5245AFD0000188743 /* CustomErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968D4245AFD0000188743 /* CustomErrorAlert.swift */; };
+		AF4968DB245AFE4300188743 /* AlbumItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968DA245AFE4300188743 /* AlbumItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		AF4968D024589EDB00188743 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		AF4968D22459E64100188743 /* DisplayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayError.swift; sourceTree = "<group>"; };
 		AF4968D4245AFD0000188743 /* CustomErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorAlert.swift; sourceTree = "<group>"; };
+		AF4968DA245AFE4300188743 /* AlbumItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumItem.swift; sourceTree = "<group>"; };
 		DDCADEBEA7E9E33C160E2FE2 /* Pods-PhotoAlbums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbums.debug.xcconfig"; path = "Target Support Files/Pods-PhotoAlbums/Pods-PhotoAlbums.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +254,7 @@
 		AF4968D9245AFDE800188743 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF4968DA245AFE4300188743 /* AlbumItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				AF4968C924584F3B00188743 /* NetworkManager.swift in Sources */,
 				AF4968D32459E64100188743 /* DisplayError.swift in Sources */,
 				AF4968C024584DD800188743 /* Config.swift in Sources */,
+				AF4968DB245AFE4300188743 /* AlbumItem.swift in Sources */,
 				AF4968CE24589E3700188743 /* ViewElements.swift in Sources */,
 				AF4968B124584AB900188743 /* UserCell.swift in Sources */,
 				AF4968CB245899A000188743 /* User.swift in Sources */,
