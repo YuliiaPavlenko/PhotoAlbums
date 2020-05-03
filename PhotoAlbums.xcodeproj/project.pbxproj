@@ -33,6 +33,7 @@
 		AF4968DD245EF62900188743 /* AlbumsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968DC245EF62900188743 /* AlbumsListVC.swift */; };
 		AF4968DF245EF63C00188743 /* AlbumImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968DE245EF63C00188743 /* AlbumImageCell.swift */; };
 		AF4968E1245EF64A00188743 /* ImageAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E0245EF64A00188743 /* ImageAlbumCell.swift */; };
+		AF4968E3245F31AE00188743 /* AlbumsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E2245F31AE00188743 /* AlbumsListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		AF4968DC245EF62900188743 /* AlbumsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListVC.swift; sourceTree = "<group>"; };
 		AF4968DE245EF63C00188743 /* AlbumImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImageCell.swift; sourceTree = "<group>"; };
 		AF4968E0245EF64A00188743 /* ImageAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAlbumCell.swift; sourceTree = "<group>"; };
+		AF4968E2245F31AE00188743 /* AlbumsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListPresenter.swift; sourceTree = "<group>"; };
 		DDCADEBEA7E9E33C160E2FE2 /* Pods-PhotoAlbums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbums.debug.xcconfig"; path = "Target Support Files/Pods-PhotoAlbums/Pods-PhotoAlbums.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +248,7 @@
 		AF4968D7245AFDD300188743 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				AF4968E2245F31AE00188743 /* AlbumsListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				AF4968AF24584AA800188743 /* UsersListVC.swift in Sources */,
 				AF4968B324584AD200188743 /* UsersListPresenter.swift in Sources */,
 				AF4968AB24584A7700188743 /* UsersListItem.swift in Sources */,
+				AF4968E3245F31AE00188743 /* AlbumsListPresenter.swift in Sources */,
 				AF4968D5245AFD0000188743 /* CustomErrorAlert.swift in Sources */,
 				AF4968B924584BF600188743 /* Album.swift in Sources */,
 			);
