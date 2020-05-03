@@ -32,6 +32,11 @@ class UsersListPresenter {
         getUserList()
     }
     
+    func userSelected(_ atIndex: Int) {
+        Cache.shared.setSelectedUser(originalUsersList[atIndex])
+        viewDelegate?.showUserAlbums()
+    }
+    
     // MARK: - Get data from server
     fileprivate func getUserList() {
         usersList = []
@@ -42,7 +47,8 @@ class UsersListPresenter {
             self.viewDelegate?.hideProgress()
             
             if let users = users {
-
+                self.originalUsersList = users
+                
                 for user in users {
                     let user = UsersListItem(name: user.name)
                     self.usersList.append(user)

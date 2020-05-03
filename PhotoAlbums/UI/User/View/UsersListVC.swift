@@ -93,6 +93,7 @@ extension UsersListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        userListPresenter.userSelected(indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
@@ -113,7 +114,8 @@ extension UsersListVC: UsersListViewDelegate {
     }
     
     func showUserAlbums() {
-        
+        let albumsListVC = AlbumsListVC()
+        navigationController?.pushViewController(albumsListVC, animated: false)
     }
     
     func showProgress() {
