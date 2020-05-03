@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+class Cache {
+    static let shared = Cache()
+
+    private var selectedUser: User?
+
+    private init() {
+    }
+
+    func setSelectedUser(_ user: User) {
+        selectedUser = user
+    }
+
+    func getSelectedUser() -> User? {
+        return selectedUser
+    }
+}
