@@ -17,4 +17,10 @@ class ViewElements {
         return nameLabel
     }
 
+    static func createAlbumImage() -> UIImageView {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        return imageView
+    }
 }
