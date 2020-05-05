@@ -44,7 +44,7 @@ class AlbumsListVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(AlbumImageCell.self, forCellReuseIdentifier: AlbumImageCell.Identifier)
-        tableView.register(ImageAlbumCell.self, forCellReuseIdentifier: ImageAlbumCell.Id)
+        tableView.register(ImageAlbumCell.self, forCellReuseIdentifier: ImageAlbumCell.Identifier)
         
         configureRefreshControl()
     }
@@ -99,7 +99,7 @@ extension AlbumsListVC: UITableViewDelegate, UITableViewDataSource {
             cell.configureWithAlbum(album: currentAlbum)
             return cell
         } else {
-             let cell = tableView.dequeueReusableCell(withIdentifier: ImageAlbumCell.Id, for: indexPath) as! ImageAlbumCell
+             let cell = tableView.dequeueReusableCell(withIdentifier: ImageAlbumCell.Identifier, for: indexPath) as! ImageAlbumCell
             cell.configureWithAlbum(album: currentAlbum)
             return cell
         }

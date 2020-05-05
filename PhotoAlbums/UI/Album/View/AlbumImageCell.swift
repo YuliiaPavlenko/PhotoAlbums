@@ -9,8 +9,9 @@
 import UIKit
 
 class AlbumImageCell: UITableViewCell {
-    static let Identifier = "AlbumImageCell"
-
+    
+    class var Identifier: String { "AlbumImageCell" }
+    
     let albumImageNameLabel = ViewElements.createUserNameLabel()
     let albumImageView = ViewElements.createAlbumImage()
 

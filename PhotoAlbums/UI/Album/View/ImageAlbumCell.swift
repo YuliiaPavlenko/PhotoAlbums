@@ -9,7 +9,8 @@
 import UIKit
 
 class ImageAlbumCell: AlbumImageCell {
-    static let Id = "ImageAlbumCell"
+    
+    override class var Identifier: String { "ImageAlbumCell" }
     
     override func configureConstraints() {
         albumImageView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 25, paddingBottom: 0, paddingRight: 0, width: 0, height: 0, enableInsets: false)
