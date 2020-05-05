@@ -83,8 +83,8 @@ extension UsersListVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.Identifier, for: indexPath) as! UserCell
-        let currentItem = usersList[indexPath.row]
-        cell.userNameLabel.text = currentItem.name?.capitalized ?? "No user name"
+        let currentUser = usersList[indexPath.row]
+        cell.configureWithUser(user: currentUser)
         return cell
     }
 
