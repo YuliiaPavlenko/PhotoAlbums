@@ -27,11 +27,11 @@ class AlbumImageCell: UITableViewCell {
     }
     
     func configureConstraints() {
-        albumImageNameLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 12, paddingLeft: 25, paddingBottom: 12, paddingRight: 25, width: 0, height: frame.size.height * 0.65, enableInsets: false)
-        albumImageView.anchor(top: topAnchor, left: albumImageNameLabel.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 12, paddingLeft: 25, paddingBottom: 12, paddingRight: 25, width: 0, height: 0, enableInsets: false)
+        albumImageNameLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 12, paddingLeft: 25, paddingBottom: 12, paddingRight: 0, width: frame.size.width * 0.7, height: 0, enableInsets: false)
+        albumImageView.anchor(top: topAnchor, left: albumImageNameLabel.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 25, paddingBottom: 0, paddingRight: 0, width: 0, height: 0, enableInsets: false)
     }
     
-    func configureWithUser(album: AlbumItem) {
+    func configureWithAlbum(album: AlbumItem) {
         albumImageNameLabel.text = album.albumTitle ?? "No album name"
     }
 
