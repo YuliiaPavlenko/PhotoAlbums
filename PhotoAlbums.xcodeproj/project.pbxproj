@@ -35,6 +35,7 @@
 		AF4968E1245EF64A00188743 /* ImageAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E0245EF64A00188743 /* ImageAlbumCell.swift */; };
 		AF4968E3245F31AE00188743 /* AlbumsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E2245F31AE00188743 /* AlbumsListPresenter.swift */; };
 		AF4968E6245F386800188743 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E5245F386800188743 /* Cache.swift */; };
+		AF4968E82461AC6900188743 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E72461AC6900188743 /* PhotoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		AF4968E0245EF64A00188743 /* ImageAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAlbumCell.swift; sourceTree = "<group>"; };
 		AF4968E2245F31AE00188743 /* AlbumsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListPresenter.swift; sourceTree = "<group>"; };
 		AF4968E5245F386800188743 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		AF4968E72461AC6900188743 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
 		DDCADEBEA7E9E33C160E2FE2 /* Pods-PhotoAlbums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbums.debug.xcconfig"; path = "Target Support Files/Pods-PhotoAlbums/Pods-PhotoAlbums.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				AF4968DA245AFE4300188743 /* AlbumItem.swift */,
+				AF4968E72461AC6900188743 /* PhotoItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				AF4968BB24584C0000188743 /* Photo.swift in Sources */,
 				AF4968C924584F3B00188743 /* NetworkManager.swift in Sources */,
 				AF4968D32459E64100188743 /* DisplayError.swift in Sources */,
+				AF4968E82461AC6900188743 /* PhotoItem.swift in Sources */,
 				AF4968C024584DD800188743 /* Config.swift in Sources */,
 				AF4968DB245AFE4300188743 /* AlbumItem.swift in Sources */,
 				AF4968CE24589E3700188743 /* ViewElements.swift in Sources */,
