@@ -16,13 +16,13 @@ class AlbumsListVC: UIViewController {
     
     var albumListPresenter = AlbumsListPresenter()
     var albumsList = [AlbumItem]()
+    var photosList = [PhotoItem]()
 
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         albumListPresenter.viewDelegate = self
         view.backgroundColor = .white
-        customizeNavigationBar()
         setupTableView()
     }
 
@@ -67,20 +67,13 @@ class AlbumsListVC: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
     }
-
-    private func customizeNavigationBar() {
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-    }
 }
 
 
 // MARK: - UITableView Delegate & DataSource
 extension AlbumsListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO
-        return albumsList.count
+        return photosList.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -92,22 +85,17 @@ extension AlbumsListVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // TODO
-        let currentAlbum = albumsList[indexPath.row]
-        if indexPath.row % 2 == 0{
+        // REFACTOR!!!!!!!
+        let currentPhoto = photosList[indexPath.row]
+        if indexPath.row % 2 == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: AlbumImageCell.Identifier, for: indexPath) as! AlbumImageCell
-            cell.configureWithAlbum(album: currentAlbum)
+            cell.configureWithAlbum(photo: currentPhoto)
             return cell
         } else {
              let cell = tableView.dequeueReusableCell(withIdentifier: ImageAlbumCell.Identifier, for: indexPath) as! ImageAlbumCell
-            cell.configureWithAlbum(album: currentAlbum)
+            cell.configureWithAlbum(photo: currentPhoto)
             return cell
         }
-        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: AlbumImageCell.Identifier, for: indexPath) as! AlbumImageCell
-        
-        
-//        return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -121,8 +109,9 @@ extension AlbumsListVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension AlbumsListVC: AlbumsListViewDelegate {
-    func showAlbums(_ albums: [AlbumItem]) {
+    func showAlbums(_ albums: [AlbumItem], photos: [PhotoItem]) {
         albumsList = albums
+        photosList = photos
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -138,6 +127,13 @@ extension AlbumsListVC: AlbumsListViewDelegate {
     }
     
     func showDownloadUserAlbumsDataError(withMessage: DisplayErrorModel) {
+        DispatchQueue.main.async {
+        let alert = CustomErrorAlert.setUpErrorAlert(withMessage)
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func showDownloadPhotosDataError(withMessage: DisplayErrorModel) {
         DispatchQueue.main.async {
         let alert = CustomErrorAlert.setUpErrorAlert(withMessage)
             self.present(alert, animated: true)

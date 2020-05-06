@@ -32,8 +32,14 @@ class AlbumImageCell: UITableViewCell {
         albumImageView.anchor(top: topAnchor, left: albumImageNameLabel.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 25, paddingBottom: 0, paddingRight: 0, width: 0, height: 0, enableInsets: false)
     }
     
-    func configureWithAlbum(album: AlbumItem) {
-        albumImageNameLabel.text = album.albumTitle ?? "No album name"
+    func configureWithAlbum(photo: PhotoItem) {
+        albumImageNameLabel.text = photo.photoName ?? "No album name"
+//        albumImageView.image = UIImage(named: photo.photo!)
+        
+        
+        let url = URL(string: photo.photo!)
+        let data = try? Data(contentsOf: url!)
+        albumImageView.image = UIImage(data: data!)
     }
 
     required init?(coder aDecoder: NSCoder) {

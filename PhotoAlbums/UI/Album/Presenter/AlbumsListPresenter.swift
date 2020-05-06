@@ -9,8 +9,9 @@
 import Foundation
 
 protocol AlbumsListViewDelegate: class {
-    func showAlbums(_ albums: [AlbumItem])
+    func showAlbums(_ albums: [AlbumItem], photos: [PhotoItem])
     func showDownloadUserAlbumsDataError(withMessage: DisplayErrorModel)
+    func showDownloadPhotosDataError(withMessage: DisplayErrorModel)
     func showAlbumsError()
     func showImage()
     func showProgress()
@@ -20,7 +21,8 @@ protocol AlbumsListViewDelegate: class {
 
 class AlbumsListPresenter {
     var albumsList = [AlbumItem]()
-    var originalUsersList = [Album]()
+    var photosList = [PhotoItem]()
+    var photos = [Photo]()
     
     weak var viewDelegate: AlbumsListViewDelegate?
     
@@ -45,11 +47,37 @@ class AlbumsListPresenter {
                 
                 if let albums = albums {
                     
-                    for album in albums {
-                        let album = AlbumItem(albumTitle: album.title, imageName: album.title, imageThumbnail: album.title)
-                        self.albumsList.append(album)
+                    // sciagnij zdjecia
+                    NetworkManager.shared.getPhotos() { [weak self] (photos, error) in
+                        guard let self = self else { return }
+                        
+                        if let photos = photos {
+                            for photo in photos {
+                                self.photos.append(photo)
+                            }
+                            
+                            for album in albums {
+                                let newAlbum = AlbumItem(albumTitle: album.title)
+                                self.albumsList.append(newAlbum)
+                                
+                                // find photos for this album
+                                let photosForAlbum = self.photos.filter { $0.albumID == album.id }
+                                
+                                for photo in photosForAlbum {
+                                    let photo = PhotoItem(photoName: photo.title, photo: photo.thumbnailURL)
+                                    self.photosList.append(photo)
+                                }
+                                
+                            }
+                            self.viewDelegate?.showAlbums(self.albumsList, photos: self.photosList)
+                            
+                        } else {
+                            if let error = error {
+                                // add error for photos
+                                self.viewDelegate?.showDownloadPhotosDataError(withMessage: DisplayError.albums.displayMessage(apiError: error))
+                            }
+                        }
                     }
-                    self.viewDelegate?.showAlbums(self.albumsList)
                 } else {
                     if let error = error {
                         self.viewDelegate?.showDownloadUserAlbumsDataError(withMessage: DisplayError.albums.displayMessage(apiError: error))
