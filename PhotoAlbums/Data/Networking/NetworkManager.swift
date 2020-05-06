@@ -50,8 +50,8 @@ final class NetworkManager {
         getData(url: url, completion: completion)
     }
     
-    func getPhotosForAlbum(albumId: Int, completion: @escaping (([Photo]?, ApiError?) -> Void)) {
-        let url = URL(string: Router.photosForAlbum(albumId))!
+    func getPhotos(completion: @escaping (([Photo]?, ApiError?) -> Void)) {
+        let url = URL(string: Router.photos)!
         getData(url: url, completion: completion)
     }
 }

@@ -16,8 +16,4 @@ class Router {
     static func albumsForUser(_ id: Int) -> String {
         return albums + "?userId=\(id)"
     }
-    
-    static func photosForAlbum(_ id: Int) -> String {
-        return photos + "?albumId=\(id)"
-    }
 }
