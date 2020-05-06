@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct PhotoItem {
+    var photoName: String?
+    var photo: String?
+}
