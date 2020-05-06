@@ -22,7 +22,6 @@ class UsersListVC: UIViewController {
         super.viewDidLoad()
         userListPresenter.viewDelegate = self
         view.backgroundColor = .white
-        customizeNavigationBar()
         setupTableView()
     }
 
@@ -35,6 +34,8 @@ class UsersListVC: UIViewController {
     // MARK: - Custom Functions
     func customizeNavigationBar(_ animated: Bool) {
         title = "Users"
+        navigationController?.navigationBar.barTintColor = .white
+
     }
     
     func setupTableView() {
@@ -66,13 +67,6 @@ class UsersListVC: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
     }
-
-    private func customizeNavigationBar() {
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-    }
-
 }
 
 // MARK: - UITableView Delegate & DataSource
