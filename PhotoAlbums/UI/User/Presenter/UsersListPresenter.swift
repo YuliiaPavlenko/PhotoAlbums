@@ -46,19 +46,20 @@ class UsersListPresenter {
             
             self.viewDelegate?.hideProgress()
             
-            if let users = users {
+            switch (users, error) {
+            case (let users?, nil):
                 self.originalUsersList = users
                 
                 for user in users {
                     let user = UsersListItem(name: user.name)
                     self.usersList.append(user)
                 }
-                
+        
                 self.viewDelegate?.showUsers(self.usersList)
-            } else {
-                if let error = error {
-                    self.viewDelegate?.showDownloadUserAlbumsDataError(withMessage: DisplayError.users.displayMessage(apiError: error))
-                }
+            case (_, .some(let error)):
+                self.viewDelegate?.showDownloadUserAlbumsDataError(withMessage: DisplayError.users.displayMessage(apiError: error))
+            case (.none, .none):
+                print("Defult case")
             }
         }
     }
