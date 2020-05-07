@@ -36,6 +36,7 @@
 		AF4968E3245F31AE00188743 /* AlbumsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E2245F31AE00188743 /* AlbumsListPresenter.swift */; };
 		AF4968E6245F386800188743 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E5245F386800188743 /* Cache.swift */; };
 		AF4968E82461AC6900188743 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E72461AC6900188743 /* PhotoItem.swift */; };
+		AF4968EA24649EC400188743 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E924649EC400188743 /* NetworkManagerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		AF4968E2245F31AE00188743 /* AlbumsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListPresenter.swift; sourceTree = "<group>"; };
 		AF4968E5245F386800188743 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		AF4968E72461AC6900188743 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
+		AF4968E924649EC400188743 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		DDCADEBEA7E9E33C160E2FE2 /* Pods-PhotoAlbums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbums.debug.xcconfig"; path = "Target Support Files/Pods-PhotoAlbums/Pods-PhotoAlbums.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +211,7 @@
 				AF4968BD24584DC900188743 /* Router.swift */,
 				AF4968C124584E3E00188743 /* ResponseValidator.swift */,
 				AF4968C824584F3B00188743 /* NetworkManager.swift */,
+				AF4968E924649EC400188743 /* NetworkManagerProtocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				AF4968AB24584A7700188743 /* UsersListItem.swift in Sources */,
 				AF4968E3245F31AE00188743 /* AlbumsListPresenter.swift in Sources */,
 				AF4968D5245AFD0000188743 /* CustomErrorAlert.swift in Sources */,
+				AF4968EA24649EC400188743 /* NetworkManagerProtocol.swift in Sources */,
 				AF4968B924584BF600188743 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
