@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class NetworkManager {
+final class NetworkManager: NetworkManagerProtocol {
 
     static let shared = NetworkManager()
     let session: URLSession
