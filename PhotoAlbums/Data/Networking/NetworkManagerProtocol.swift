@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+protocol NetworkManagerProtocol {
+    
+    func getUsers(completion: @escaping (([User]?, ApiError?) -> Void))
+    func getAlbumsForUser(userId: Int, completion: @escaping (([Album]?, ApiError?) -> Void))
+    func getPhotos(completion: @escaping (([Photo]?, ApiError?) -> Void))
+}
