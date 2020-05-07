@@ -37,6 +37,8 @@
 		AF4968E6245F386800188743 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E5245F386800188743 /* Cache.swift */; };
 		AF4968E82461AC6900188743 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E72461AC6900188743 /* PhotoItem.swift */; };
 		AF4968EA24649EC400188743 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E924649EC400188743 /* NetworkManagerProtocol.swift */; };
+		AF4968ED24649FAD00188743 /* UserViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968EC24649FAD00188743 /* UserViewModelProtocol.swift */; };
+		AF4968EF24649FC700188743 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968EE24649FC700188743 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		AF4968E5245F386800188743 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		AF4968E72461AC6900188743 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
 		AF4968E924649EC400188743 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		AF4968EC24649FAD00188743 /* UserViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelProtocol.swift; sourceTree = "<group>"; };
+		AF4968EE24649FC700188743 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		DDCADEBEA7E9E33C160E2FE2 /* Pods-PhotoAlbums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbums.debug.xcconfig"; path = "Target Support Files/Pods-PhotoAlbums/Pods-PhotoAlbums.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +145,7 @@
 		AF4968A52458493400188743 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				AF4968EB24649F7E00188743 /* ViewModel */,
 				AF4968A82458495300188743 /* Model */,
 				AF4968A72458494C00188743 /* View */,
 				AF4968A62458493F00188743 /* Presenter */,
@@ -288,6 +293,15 @@
 			path = Cache;
 			sourceTree = "<group>";
 		};
+		AF4968EB24649F7E00188743 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF4968EC24649FAD00188743 /* UserViewModelProtocol.swift */,
+				AF4968EE24649FC700188743 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -408,10 +422,12 @@
 				AF4968D124589EDB00188743 /* UIView+Utils.swift in Sources */,
 				AF4968BB24584C0000188743 /* Photo.swift in Sources */,
 				AF4968C924584F3B00188743 /* NetworkManager.swift in Sources */,
+				AF4968EF24649FC700188743 /* UserViewModel.swift in Sources */,
 				AF4968D32459E64100188743 /* DisplayError.swift in Sources */,
 				AF4968E82461AC6900188743 /* PhotoItem.swift in Sources */,
 				AF4968C024584DD800188743 /* Config.swift in Sources */,
 				AF4968DB245AFE4300188743 /* AlbumItem.swift in Sources */,
+				AF4968ED24649FAD00188743 /* UserViewModelProtocol.swift in Sources */,
 				AF4968CE24589E3700188743 /* ViewElements.swift in Sources */,
 				AF4968B124584AB900188743 /* UserCell.swift in Sources */,
 				AF4968E6245F386800188743 /* Cache.swift in Sources */,
