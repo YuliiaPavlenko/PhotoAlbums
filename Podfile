@@ -6,6 +6,7 @@ def all_pods
   pod 'PKHUD', '~> 5.0'
   pod 'SwiftLint'
   pod 'Kingfisher', '~> 5.0'
+  pod "Resolver"
 end
 
 
