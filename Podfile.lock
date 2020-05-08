@@ -1,20 +1,34 @@
 PODS:
   - PKHUD (5.3.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
   - SwiftLint (0.38.2)
 
 DEPENDENCIES:
   - PKHUD (~> 5.0)
+  - RxCocoa (= 5.0.0)
+  - RxSwift (= 5.0.0)
   - SwiftLint
 
 SPEC REPOS:
   trunk:
     - PKHUD
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SwiftLint
 
 SPEC CHECKSUMS:
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
 
-PODFILE CHECKSUM: 7267d245ca90f39060458acc42fe0e2712ef3a7e
+PODFILE CHECKSUM: 8d80bd9ab4e4e6a214e1ba3451bcc99d6d37dd53
 
 COCOAPODS: 1.8.4

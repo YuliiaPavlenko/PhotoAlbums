@@ -15,7 +15,6 @@
 		AF4968AB24584A7700188743 /* UsersListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968AA24584A7700188743 /* UsersListItem.swift */; };
 		AF4968AF24584AA800188743 /* UsersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968AE24584AA800188743 /* UsersListVC.swift */; };
 		AF4968B124584AB900188743 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968B024584AB900188743 /* UserCell.swift */; };
-		AF4968B324584AD200188743 /* UsersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968B224584AD200188743 /* UsersListPresenter.swift */; };
 		AF4968B924584BF600188743 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968B824584BF600188743 /* Album.swift */; };
 		AF4968BB24584C0000188743 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968BA24584C0000188743 /* Photo.swift */; };
 		AF4968BE24584DC900188743 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968BD24584DC900188743 /* Router.swift */; };
@@ -53,7 +52,6 @@
 		AF4968AA24584A7700188743 /* UsersListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListItem.swift; sourceTree = "<group>"; };
 		AF4968AE24584AA800188743 /* UsersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListVC.swift; sourceTree = "<group>"; };
 		AF4968B024584AB900188743 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		AF4968B224584AD200188743 /* UsersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListPresenter.swift; sourceTree = "<group>"; };
 		AF4968B824584BF600188743 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		AF4968BA24584C0000188743 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		AF4968BD24584DC900188743 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -148,17 +146,8 @@
 				AF4968EB24649F7E00188743 /* ViewModel */,
 				AF4968A82458495300188743 /* Model */,
 				AF4968A72458494C00188743 /* View */,
-				AF4968A62458493F00188743 /* Presenter */,
 			);
 			path = User;
-			sourceTree = "<group>";
-		};
-		AF4968A62458493F00188743 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				AF4968B224584AD200188743 /* UsersListPresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		AF4968A72458494C00188743 /* View */ = {
@@ -439,7 +428,6 @@
 				AF4968E1245EF64A00188743 /* ImageAlbumCell.swift in Sources */,
 				AF4968DD245EF62900188743 /* AlbumsListVC.swift in Sources */,
 				AF4968AF24584AA800188743 /* UsersListVC.swift in Sources */,
-				AF4968B324584AD200188743 /* UsersListPresenter.swift in Sources */,
 				AF4968AB24584A7700188743 /* UsersListItem.swift in Sources */,
 				AF4968E3245F31AE00188743 /* AlbumsListPresenter.swift in Sources */,
 				AF4968D5245AFD0000188743 /* CustomErrorAlert.swift in Sources */,

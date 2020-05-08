@@ -7,3 +7,19 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+
+protocol UserViewModelProtocol {
+    
+    var usersList: BehaviorRelay<[UsersListItem]> {get}
+
+//    var webService: NetworkManagerProtocol {get}
+    
+//    init(webService: NetworkManagerProtocol)
+//    init()
+    
+    func viewIsPrepared()
+    func onRefreshSwiped()
+    func userSelected(_ atIndex: Int)
+}

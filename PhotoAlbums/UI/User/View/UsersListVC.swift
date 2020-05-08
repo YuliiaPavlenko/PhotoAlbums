@@ -8,26 +8,32 @@
 
 import UIKit
 import PKHUD
+import RxSwift
 
 class UsersListVC: UIViewController {
+    
+    // MARK: - RxSwift Properties
+    let disposeBag = DisposeBag()
     
     let tableView = UITableView()
     var refreshControl = UIRefreshControl()
     
-    var userListPresenter = UsersListPresenter()
-    var usersList = [UsersListItem]()
+    var userListViewModel = UserViewModel()
 
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        userListPresenter.viewDelegate = self
+        userListViewModel.viewDelegate = self
         view.backgroundColor = .white
         setupTableView()
+        setupUsersObserver()
+        setupCellConfiguration()
+        setupCellTapHandling()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        userListPresenter.viewIsPrepared()
+        userListViewModel.viewIsPrepared()
         customizeNavigationBar(animated)
     }
 
@@ -35,18 +41,16 @@ class UsersListVC: UIViewController {
     func customizeNavigationBar(_ animated: Bool) {
         title = "Users"
         navigationController?.navigationBar.barTintColor = .white
-
     }
     
     func setupTableView() {
         view.addSubview(tableView)
         configureConstraintsForTableView()
 
-        tableView.delegate = self
-        tableView.dataSource = self
         tableView.register(UserCell.self, forCellReuseIdentifier: UserCell.Identifier)
         
         configureRefreshControl()
+        tableView.rx.setDelegate(self).disposed(by: disposeBag)
     }
     
     func configureRefreshControl() {
@@ -57,7 +61,7 @@ class UsersListVC: UIViewController {
     }
     
     @objc func refresh() {
-        userListPresenter.onRefreshSwiped()
+        userListViewModel.onRefreshSwiped()
     }
 
     func configureConstraintsForTableView() {
@@ -69,36 +73,15 @@ class UsersListVC: UIViewController {
     }
 }
 
-// MARK: - UITableView Delegate & DataSource
-extension UsersListVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return usersList.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.Identifier, for: indexPath) as! UserCell
-        let currentUser = usersList[indexPath.row]
-        cell.configureWithUser(user: currentUser)
-        return cell
-    }
-
+// MARK: - UITableView Delegate
+extension UsersListVC: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        userListPresenter.userSelected(indexPath.row)
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 extension UsersListVC: UsersListViewDelegate {
-    func showUsers(_ users: [UsersListItem]) {
-        usersList = users
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-    }
     
     func showDownloadUserAlbumsDataError(withMessage: DisplayErrorModel) {
         DispatchQueue.main.async {
@@ -122,4 +105,42 @@ extension UsersListVC: UsersListViewDelegate {
             HUD.hide()
         }
     }
+}
+
+// MARK:- Rx Setup
+private extension UsersListVC {
+    func setupUsersObserver() {
+        userListViewModel.usersList.asObservable().subscribe(onNext: {
+            [unowned self] _ in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            }).disposed(by: disposeBag)
+    }
+    
+    func setupCellConfiguration() {
+      userListViewModel.usersList
+        .bind(to: tableView
+          .rx
+          .items(cellIdentifier: UserCell.Identifier,
+                 cellType: UserCell.self)) {
+                  row, user, cell in
+                  cell.configureWithUser(user: user)
+        }
+        .disposed(by: disposeBag)
+    }
+
+    func setupCellTapHandling() {
+      tableView
+        .rx
+        .modelSelected(UsersListItem.self)
+        .subscribe(onNext: { [unowned self] user in
+          if let selectedRowIndexPath = self.tableView.indexPathForSelectedRow {
+            self.userListViewModel.userSelected(selectedRowIndexPath.row)
+            self.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
+          }
+        })
+        .disposed(by: disposeBag)
+    }
+    
 }
