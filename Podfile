@@ -7,6 +7,7 @@ def all_pods
   pod 'SwiftLint'
   pod 'RxSwift', '5.0.0'
   pod 'RxCocoa', '5.0.0'
+  pod 'RxDataSources', '~> 4.0'
 end
 
 

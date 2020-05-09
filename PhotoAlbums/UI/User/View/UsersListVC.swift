@@ -50,7 +50,8 @@ class UsersListVC: UIViewController {
         tableView.register(UserCell.self, forCellReuseIdentifier: UserCell.Identifier)
         
         configureRefreshControl()
-        tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        tableView.rowHeight = 60
+//        tableView.rx.setDelegate(self).disposed(by: disposeBag)
     }
     
     func configureRefreshControl() {
@@ -74,12 +75,12 @@ class UsersListVC: UIViewController {
 }
 
 // MARK: - UITableView Delegate
-extension UsersListVC: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
-}
+//extension UsersListVC: UITableViewDelegate {
+//    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 60
+//    }
+//}
 
 extension UsersListVC: UsersListViewDelegate {
     

@@ -1,15 +1,16 @@
 //
-//  AlbumsListPresenter.swift
+//  AlbumViewModel.swift
 //  PhotoAlbums
 //
-//  Created by Yuliia Pavlenko on 03/05/2020.
+//  Created by Yuliia Pavlenko on 08/05/2020.
 //  Copyright © 2020 Yuliia Pavlenko. All rights reserved.
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 protocol AlbumsListViewDelegate: class {
-    func showAlbums(_ albums: [AlbumItem], photos: [PhotoItem])
     func showDownloadUserAlbumsDataError(withMessage: DisplayErrorModel)
     func showDownloadPhotosDataError(withMessage: DisplayErrorModel)
     func showAlbumsError()
@@ -18,10 +19,12 @@ protocol AlbumsListViewDelegate: class {
     func hideProgress()
 }
 
-
-class AlbumsListPresenter {
-    var albumsList = [AlbumItem]()
-    var photosList = [PhotoItem]()
+class AlbumViewModel {
+    
+    // MARK: - RxSwift Properties
+    var albumsList: BehaviorRelay<[AlbumItem]> = BehaviorRelay(value: [])
+    var photosList: BehaviorRelay<[PhotoItem]> = BehaviorRelay(value: [])
+    
     var photos = [Photo]()
     
     weak var viewDelegate: AlbumsListViewDelegate?
@@ -47,19 +50,20 @@ class AlbumsListPresenter {
                 }
                 
                 for album in albums {
-                    let newAlbum = AlbumItem(albumTitle: album.title)
-                    self.albumsList.append(newAlbum)
+                    let aalbum = AlbumItem(albumTitle: album.title)
+                    let newAlbum = self.albumsList.value + [aalbum]
+                    self.albumsList.accept(newAlbum)
                     
                     // find photos for this album
                     let photosForAlbum = self.photos.filter { $0.albumID == album.id }
                     
                     for photo in photosForAlbum {
                         let photo = PhotoItem(photoName: photo.title, photo: photo.thumbnailURL)
-                        self.photosList.append(photo)
+                        let newPhoto = self.photosList.value + [photo]
+                        self.photosList.accept(newPhoto)
                     }
                     
                 }
-                self.viewDelegate?.showAlbums(self.albumsList, photos: self.photosList)
                 
             } else {
                 if let error = error {

@@ -19,7 +19,7 @@ protocol UsersListViewDelegate: class {
 
 class UserViewModel: UserViewModelProtocol {
     
-    // RxSwift Properties    
+    // MARK: - RxSwift Properties
     var usersList: BehaviorRelay<[UsersListItem]> = BehaviorRelay(value: [])
     
     var originalUsersList = [User]()
