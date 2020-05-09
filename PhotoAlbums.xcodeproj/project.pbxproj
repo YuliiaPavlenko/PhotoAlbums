@@ -34,7 +34,6 @@
 		AF4968E1245EF64A00188743 /* ImageAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E0245EF64A00188743 /* ImageAlbumCell.swift */; };
 		AF4968E6245F386800188743 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E5245F386800188743 /* Cache.swift */; };
 		AF4968E82461AC6900188743 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E72461AC6900188743 /* PhotoItem.swift */; };
-		AF4968EA24649EC400188743 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968E924649EC400188743 /* NetworkManagerProtocol.swift */; };
 		AF4968ED24649FAD00188743 /* UserViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968EC24649FAD00188743 /* UserViewModelProtocol.swift */; };
 		AF4968EF24649FC700188743 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4968EE24649FC700188743 /* UserViewModel.swift */; };
 		AFC99A3D2465591700F49402 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC99A3C2465591700F49402 /* AlbumViewModel.swift */; };
@@ -71,7 +70,6 @@
 		AF4968E0245EF64A00188743 /* ImageAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAlbumCell.swift; sourceTree = "<group>"; };
 		AF4968E5245F386800188743 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		AF4968E72461AC6900188743 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
-		AF4968E924649EC400188743 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		AF4968EC24649FAD00188743 /* UserViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelProtocol.swift; sourceTree = "<group>"; };
 		AF4968EE24649FC700188743 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		AFC99A3C2465591700F49402 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 				AF4968BD24584DC900188743 /* Router.swift */,
 				AF4968C124584E3E00188743 /* ResponseValidator.swift */,
 				AF4968C824584F3B00188743 /* NetworkManager.swift */,
-				AF4968E924649EC400188743 /* NetworkManagerProtocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -415,7 +412,6 @@
 				AF4968AB24584A7700188743 /* UsersListItem.swift in Sources */,
 				AFC99A3D2465591700F49402 /* AlbumViewModel.swift in Sources */,
 				AF4968D5245AFD0000188743 /* CustomErrorAlert.swift in Sources */,
-				AF4968EA24649EC400188743 /* NetworkManagerProtocol.swift in Sources */,
 				AF4968B924584BF600188743 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
