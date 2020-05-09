@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AlbumImageCell: UITableViewCell {
     
@@ -29,17 +30,17 @@ class AlbumImageCell: UITableViewCell {
     
     func configureConstraints() {
         albumImageNameLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 12, paddingLeft: 25, paddingBottom: 12, paddingRight: 0, width: frame.size.width * 0.7, height: 0, enableInsets: false)
-        albumImageView.anchor(top: topAnchor, left: albumImageNameLabel.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 25, paddingBottom: 0, paddingRight: 0, width: 0, height: 0, enableInsets: false)
+        albumImageView.anchor(top: topAnchor, left: albumImageNameLabel.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 12, paddingLeft: 25, paddingBottom: 12, paddingRight: 25, width: 0, height: 0, enableInsets: false)
     }
     
     func configureWithAlbum(photo: PhotoItem) {
         albumImageNameLabel.text = photo.photoName ?? "No album name"
-//        albumImageView.image = UIImage(named: photo.photo!)
-        
-        
-        let url = URL(string: photo.photo!)
-        let data = try? Data(contentsOf: url!)
-        albumImageView.image = UIImage(data: data!)
+        if photo.photo != nil {
+            let url = URL(string: photo.photo!)
+            albumImageView.kf.setImage(with: url)
+        } else {
+            albumImageView.image = UIImage(named: "noImageIcon.png")
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {

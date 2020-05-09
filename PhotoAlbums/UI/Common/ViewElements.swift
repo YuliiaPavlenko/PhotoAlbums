@@ -21,7 +21,6 @@ class ViewElements {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
-        imageView.image = UIImage(named: "noImageIcon.png")
         return imageView
     }
 }
