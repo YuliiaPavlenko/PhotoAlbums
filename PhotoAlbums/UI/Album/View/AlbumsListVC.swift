@@ -103,7 +103,7 @@ extension AlbumsListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        albumListPresenter.showImage(indexPath.row)
+        albumListPresenter.photoSelected(indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
@@ -138,11 +138,6 @@ extension AlbumsListVC: AlbumsListViewDelegate {
         let alert = CustomErrorAlert.setUpErrorAlert(withMessage)
             self.present(alert, animated: true)
         }
-    }
-    
-    func showUserAlbums() {
-        let albumsListVC = AlbumsListVC()
-        navigationController?.pushViewController(albumsListVC, animated: false)
     }
     
     func showProgress() {

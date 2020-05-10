@@ -23,6 +23,7 @@ class AlbumsListPresenter {
     var albumsList = [AlbumItem]()
     var photosList = [PhotoItem]()
     var photos = [Photo]()
+//    var originalPhotosList = [Photo]()
     
     weak var viewDelegate: AlbumsListViewDelegate?
     
@@ -33,6 +34,11 @@ class AlbumsListPresenter {
     
     func onRefreshSwiped() {
         getAlbumsList()
+    }
+    
+    func photoSelected(_ atIndex: Int) {
+        Cache.shared.setSelectedPhoto(photos[atIndex])
+        viewDelegate?.showImage()
     }
     
     // MARK: - Get data from server

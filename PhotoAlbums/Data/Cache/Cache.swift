@@ -12,6 +12,7 @@ class Cache {
     static let shared = Cache()
 
     private var selectedUser: User?
+    private var selectedPhoto: Photo?
 
     private init() {
     }
@@ -22,5 +23,9 @@ class Cache {
 
     func getSelectedUser() -> User? {
         return selectedUser
+    }
+    
+    func setSelectedPhoto(_ photo: Photo) {
+        selectedPhoto = photo
     }
 }
