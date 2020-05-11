@@ -137,7 +137,6 @@ extension AlbumsListVC: AlbumsListViewDelegate {
     
     func showProgress() {
         HUD.show(.progress)
-        HUD.allowsInteraction = true
     }
 
     func hideProgress() {
