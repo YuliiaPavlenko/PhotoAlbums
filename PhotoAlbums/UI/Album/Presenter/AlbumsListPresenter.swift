@@ -20,10 +20,8 @@ protocol AlbumsListViewDelegate: class {
 
 
 class AlbumsListPresenter {
-    var albumsList = [AlbumItem]()
-    var photosList = [PhotoItem]()
-    var photos = [Photo]()
     
+    var photos = [Photo]()
     var albumsWithPhotos = [AlbumHolder]()
     
     weak var viewDelegate: AlbumsListViewDelegate?
@@ -68,10 +66,7 @@ class AlbumsListPresenter {
                             }
                             
                             for album in albums {
-                            
-                                let newAlbum = AlbumItem(albumTitle: album.title)
-                                self.albumsList.append(newAlbum)
-                                
+
                                 // find photos for this album
                                 let photosForAlbum = self.photos.filter { $0.albumID == album.id }
                                 
@@ -81,6 +76,7 @@ class AlbumsListPresenter {
                                     photoItems.append(photo)
                                 }
                                 
+                                let newAlbum = AlbumItem(albumTitle: album.title)
                                 let albumHolder = AlbumHolder(album: newAlbum, photos: photoItems)
                                 self.albumsWithPhotos.append(albumHolder)
                                 
