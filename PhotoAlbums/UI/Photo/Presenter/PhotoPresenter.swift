@@ -9,11 +9,12 @@
 import Foundation
 
 protocol PhotoViewDelegate: class {
-    func showImage(_ image: ImageItem)
+    func showImageFromURL(_ url: String)
     func showPhotoError()
     func showDownloadPhotoError(withMessage: DisplayErrorModel)
+    func showProgress()
+    func hideProgress()
 }
-
 
 class PhotoPresenter {
     
@@ -25,8 +26,12 @@ class PhotoPresenter {
         
         if let photo = selectedPhoto {
             let photoToShow = ImageItem(url: photo.url, title: photo.title)
-            viewDelegate?.showImage(photoToShow)
-            navBarTitle = photo.title
+            if let url = photoToShow.url {
+                viewDelegate?.showImageFromURL(url)
+            } else {
+                viewDelegate?.showPhotoError()
+            }
+            navBarTitle = photoToShow.title
         } else {
             viewDelegate?.showPhotoError()
         }
@@ -34,5 +39,13 @@ class PhotoPresenter {
     
     func setNavigationBarTitle() -> String {
         return navBarTitle ?? "No image name"
+    }
+    
+    func startLoadingPhoto() {
+        viewDelegate?.showProgress()
+    }
+    
+    func finishLoadingPhoto() {
+        viewDelegate?.hideProgress()
     }
 }

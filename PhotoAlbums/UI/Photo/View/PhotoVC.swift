@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import PKHUD
 
 class PhotoVC: UIViewController, WKNavigationDelegate {
 
@@ -15,19 +16,29 @@ class PhotoVC: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     
     // MARK: - View Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        photoPresenter.viewDelegate = self
+        photoPresenter.showPhoto()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        customizeNavigationBar(animated)
+    }
+    
+    // MARK: - Configure WebView
     override func loadView() {
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        photoPresenter.viewDelegate = self
-        photoPresenter.showPhoto()
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        photoPresenter.startLoadingPhoto()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        customizeNavigationBar(animated)
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        photoPresenter.finishLoadingPhoto()
     }
     
     // MARK: - Custom Function
@@ -38,10 +49,9 @@ class PhotoVC: UIViewController, WKNavigationDelegate {
 
 
 extension PhotoVC: PhotoViewDelegate {
-    func showImage(_ image: ImageItem) {
-        let url = URL(string: image.url!)!
-        webView.load(URLRequest(url: url))
-        webView.allowsBackForwardNavigationGestures = true
+    func showImageFromURL(_ url: String) {
+        let url = URL(string: url)
+        webView.load(URLRequest(url: url!))
     }
     
     func showPhotoError() {
@@ -53,6 +63,16 @@ extension PhotoVC: PhotoViewDelegate {
         DispatchQueue.main.async {
         let alert = CustomErrorAlert.setUpErrorAlert(withMessage)
             self.present(alert, animated: true)
+        }
+    }
+    
+    func showProgress() {
+        HUD.show(.progress)
+    }
+
+    func hideProgress() {
+        DispatchQueue.main.async {
+            HUD.hide()
         }
     }
 }
