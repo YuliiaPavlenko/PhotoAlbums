@@ -21,14 +21,14 @@ class AlbumsListVC: UIViewController {
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        albumListPresenter.viewDelegate = self
         view.backgroundColor = .white
+        albumListPresenter.viewDelegate = self
+        albumListPresenter.viewIsPrepared()
         setupTableView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        albumListPresenter.viewIsPrepared()
         customizeNavigationBar(animated)
     }
 

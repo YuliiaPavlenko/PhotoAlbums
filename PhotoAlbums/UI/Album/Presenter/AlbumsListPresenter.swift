@@ -79,14 +79,13 @@ class AlbumsListPresenter {
                             
                         } else {
                             if let error = error {
-                                // add error for photos
                                 self.viewDelegate?.showDownloadPhotosDataError(withMessage: DisplayError.albums.displayMessage(apiError: error))
                             }
                         }
                     }
                 } else {
                     if let error = error {
-                        self.viewDelegate?.showDownloadUserAlbumsDataError(withMessage: DisplayError.albums.displayMessage(apiError: error))
+                        self.viewDelegate?.showDownloadUserAlbumsDataError(withMessage: DisplayError.photos.displayMessage(apiError: error))
                     }
                 }
             }
