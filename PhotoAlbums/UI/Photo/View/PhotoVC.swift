@@ -8,12 +8,13 @@
 
 import UIKit
 import WebKit
-import PKHUD
 
 class PhotoVC: UIViewController, WKNavigationDelegate {
 
+    var photoPresenter = PhotoPresenter()
     var webView: WKWebView!
     
+    // MARK: - View Lifecycle
     override func loadView() {
         webView = WKWebView()
         webView.navigationDelegate = self
@@ -22,33 +23,36 @@ class PhotoVC: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: "https://www.hackingwithswift.com")!
-        webView.load(URLRequest(url: url))
-        webView.allowsBackForwardNavigationGestures = true
+        photoPresenter.viewDelegate = self
+        photoPresenter.showPhoto()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        customizeNavigationBar(animated)
+    }
+    
+    // MARK: - Custom Function
+    func customizeNavigationBar(_ animated: Bool) {
+        title = photoPresenter.setNavigationBarTitle()
     }
 }
 
 
 extension PhotoVC: PhotoViewDelegate {
-    func showImage(_ image: [ImageItem]) {
-        let url = URL(string: "https://www.hackingwithswift.com")!
+    func showImage(_ image: ImageItem) {
+        let url = URL(string: image.url!)!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
     }
     
-    func showDownloadPhotoError(withMessage: DisplayErrorModel) {
-        
+    func showPhotoError() {
+        let alert = CustomErrorAlert.setUpErrorAlert(nil)
+        present(alert, animated: true)
     }
     
-    func showProgress() {
-        HUD.show(.progress)
-    }
-
-    func hideProgress() {
+    func showDownloadPhotoError(withMessage: DisplayErrorModel) {
         DispatchQueue.main.async {
-            HUD.hide()
+        let alert = CustomErrorAlert.setUpErrorAlert(withMessage)
+            self.present(alert, animated: true)
         }
     }
-    
-    
 }

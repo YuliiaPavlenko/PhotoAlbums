@@ -15,8 +15,7 @@ class AlbumsListVC: UIViewController {
     var refreshControl = UIRefreshControl()
     
     var albumListPresenter = AlbumsListPresenter()
-    var albumsList = [AlbumItem]()
-    var photosList = [PhotoItem]()
+    var holder = [AlbumHolder]()
 
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -73,20 +72,20 @@ class AlbumsListVC: UIViewController {
 // MARK: - UITableView Delegate & DataSource
 extension AlbumsListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return photosList.count
+        return holder[section].photos!.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return albumsList.count
+        return holder.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return albumsList[section].albumTitle?.capitalized
+        return holder[section].album?.albumTitle?.capitalized
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // REFACTOR!!!!!!!
-        let currentPhoto = photosList[indexPath.row]
+        
+        let currentPhoto = holder[indexPath.section].photos![indexPath.row]
         if indexPath.row % 2 == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: AlbumImageCell.Identifier, for: indexPath) as! AlbumImageCell
             cell.configureWithAlbum(photo: currentPhoto)
@@ -103,15 +102,14 @@ extension AlbumsListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        albumListPresenter.photoSelected(indexPath.row)
+        albumListPresenter.photoSelected(indexPath.section, indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 extension AlbumsListVC: AlbumsListViewDelegate {
-    func showAlbums(_ albums: [AlbumItem], photos: [PhotoItem]) {
-        albumsList = albums
-        photosList = photos
+    func showAlbums(_ albumsWithPhotos: [AlbumHolder]) {
+        holder = albumsWithPhotos
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -143,6 +141,7 @@ extension AlbumsListVC: AlbumsListViewDelegate {
     
     func showProgress() {
         HUD.show(.progress)
+        HUD.allowsInteraction = true
     }
 
     func hideProgress() {

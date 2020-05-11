@@ -10,4 +10,6 @@ import Foundation
 
 struct ImageItem {
     var url: String?
+    var title: String?
+    
 }
