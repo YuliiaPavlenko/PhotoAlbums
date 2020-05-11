@@ -9,6 +9,7 @@
 import Foundation
 
 struct PhotoItem {
+    var id: Int?
     var photoName: String?
     var photo: String?
 }

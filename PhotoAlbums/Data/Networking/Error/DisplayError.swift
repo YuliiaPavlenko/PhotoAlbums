@@ -14,14 +14,18 @@ struct DisplayErrorModel {
 }
 
 enum DisplayError {
-    case users, albums
+    case users, albums, photos, photo
 
     func displayMessage(apiError: ApiError) -> DisplayErrorModel {
         switch self {
         case .users:
             return getErrorMessageForUsersList(apiError: apiError)
         case .albums:
-            return getErrorMessageGetAlbums(apiError: apiError)
+            return getErrorMessageForAlbums(apiError: apiError)
+        case .photos:
+            return getErrorMessageForPhotos(apiError: apiError)
+        case .photo:
+            return getErrorMessageForPhoto(apiError: apiError)
         }
     }
 
@@ -30,7 +34,7 @@ enum DisplayError {
         var message: String?
         switch apiError {
         case .serverError, .unknown, .communicationError:
-            message = "Failed to download users list. Please make sure you\'re connected to the internet and try again.\nContact support if the problem continues."
+            message = "Contact support if the problem continues."
         default:
             message = "Unknown error"
         }
@@ -40,12 +44,42 @@ enum DisplayError {
         return DisplayErrorModel(title: errorDescription, message: message!)
     }
 
-    private func getErrorMessageGetAlbums(apiError: ApiError) -> DisplayErrorModel {
+    private func getErrorMessageForAlbums(apiError: ApiError) -> DisplayErrorModel {
         let errorDescription = "Error get albums"
         var message: String?
         switch apiError {
         case .serverError, .unknown, .communicationError:
-            message = "Failed to download albums. Please make sure you\'re connected to the internet and try again.\nContact support if the problem continues."
+            message = "Contact support if the problem continues."
+        default:
+            message = "Unknown error"
+        }
+        #if DEBUG
+        message = apiError.debugDescription
+        #endif
+        return DisplayErrorModel(title: errorDescription, message: message!)
+    }
+    
+    private func getErrorMessageForPhotos(apiError: ApiError) -> DisplayErrorModel {
+        let errorDescription = "Error get photos for albums"
+        var message: String?
+        switch apiError {
+        case .serverError, .unknown, .communicationError:
+            message = "Failed to load photos. Please make sure you\'re connected to the internet and try again."
+        default:
+            message = "Unknown error"
+        }
+        #if DEBUG
+        message = apiError.debugDescription
+        #endif
+        return DisplayErrorModel(title: errorDescription, message: message!)
+    }
+    
+    private func getErrorMessageForPhoto(apiError: ApiError) -> DisplayErrorModel {
+        let errorDescription = "Error get photo"
+        var message: String?
+        switch apiError {
+        case .serverError, .unknown, .communicationError:
+            message = "Failed to load photo. Please make sure you\'re connected to the internet and try again."
         default:
             message = "Unknown error"
         }

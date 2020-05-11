@@ -28,4 +28,8 @@ class Cache {
     func setSelectedPhoto(_ photo: Photo) {
         selectedPhoto = photo
     }
+    
+    func getSelectedPhoto() -> Photo? {
+        return selectedPhoto
+    }
 }

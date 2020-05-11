@@ -9,7 +9,7 @@
 import Foundation
 
 protocol AlbumsListViewDelegate: class {
-    func showAlbums(_ albums: [AlbumItem], photos: [PhotoItem])
+    func showAlbums(_ albumsWithPhotos: [AlbumHolder])
     func showDownloadUserAlbumsDataError(withMessage: DisplayErrorModel)
     func showDownloadPhotosDataError(withMessage: DisplayErrorModel)
     func showAlbumsError()
@@ -20,10 +20,9 @@ protocol AlbumsListViewDelegate: class {
 
 
 class AlbumsListPresenter {
-    var albumsList = [AlbumItem]()
-    var photosList = [PhotoItem]()
+    
     var photos = [Photo]()
-//    var originalPhotosList = [Photo]()
+    var albumsWithPhotos = [AlbumHolder]()
     
     weak var viewDelegate: AlbumsListViewDelegate?
     
@@ -36,8 +35,12 @@ class AlbumsListPresenter {
         getAlbumsList()
     }
     
-    func photoSelected(_ atIndex: Int) {
-        Cache.shared.setSelectedPhoto(photos[atIndex])
+    func photoSelected(_ albumIndex: Int, _ atIndex: Int) {
+        let photoId = albumsWithPhotos[albumIndex].photos![atIndex].id
+        
+        let selectedPhoto = photos.filter {$0.id == photoId}
+        
+        Cache.shared.setSelectedPhoto(selectedPhoto[0])
         viewDelegate?.showImage()
     }
     
@@ -51,7 +54,7 @@ class AlbumsListPresenter {
                 guard let self = self else { return }
                 self.viewDelegate?.hideProgress()
                 
-                if let albums = albums {
+                if let albums = albums {                    
                     
                     // sciagnij zdjecia
                     NetworkManager.shared.getPhotos() { [weak self] (photos, error) in
@@ -63,30 +66,32 @@ class AlbumsListPresenter {
                             }
                             
                             for album in albums {
-                                let newAlbum = AlbumItem(albumTitle: album.title)
-                                self.albumsList.append(newAlbum)
-                                
+
                                 // find photos for this album
                                 let photosForAlbum = self.photos.filter { $0.albumID == album.id }
                                 
+                                var photoItems = [PhotoItem]()
                                 for photo in photosForAlbum {
-                                    let photo = PhotoItem(photoName: photo.title, photo: photo.thumbnailURL)
-                                    self.photosList.append(photo)
+                                    let photo = PhotoItem(id: photo.id, photoName: photo.title, photo: photo.thumbnailURL)
+                                    photoItems.append(photo)
                                 }
                                 
+                                let newAlbum = AlbumItem(albumTitle: album.title)
+                                let albumHolder = AlbumHolder(album: newAlbum, photos: photoItems)
+                                self.albumsWithPhotos.append(albumHolder)
+                                
                             }
-                            self.viewDelegate?.showAlbums(self.albumsList, photos: self.photosList)
+                            self.viewDelegate?.showAlbums(self.albumsWithPhotos)
                             
                         } else {
                             if let error = error {
-                                // add error for photos
                                 self.viewDelegate?.showDownloadPhotosDataError(withMessage: DisplayError.albums.displayMessage(apiError: error))
                             }
                         }
                     }
                 } else {
                     if let error = error {
-                        self.viewDelegate?.showDownloadUserAlbumsDataError(withMessage: DisplayError.albums.displayMessage(apiError: error))
+                        self.viewDelegate?.showDownloadUserAlbumsDataError(withMessage: DisplayError.photos.displayMessage(apiError: error))
                     }
                 }
             }

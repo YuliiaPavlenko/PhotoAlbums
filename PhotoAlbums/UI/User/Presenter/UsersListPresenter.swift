@@ -6,7 +6,7 @@
 //  Copyright © 2020 Yuliia Pavlenko. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol UsersListViewDelegate: class {
     func showUsers(_ users: [UsersListItem])
