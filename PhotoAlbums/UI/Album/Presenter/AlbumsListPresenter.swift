@@ -10,7 +10,7 @@ import Foundation
 
 protocol AlbumsListViewDelegate: class {
     func showAlbums(_ albumsWithPhotos: [AlbumHolder])
-    func showDownloadUserAlbumsDataError(withMessage: DisplayErrorModel)
+    func showDownloadAlbumsDataError(withMessage: DisplayErrorModel)
     func showDownloadPhotosDataError(withMessage: DisplayErrorModel)
     func showAlbumsError()
     func showImage()
@@ -60,11 +60,11 @@ class AlbumsListPresenter {
                 case (let albums?, nil):
                     self.getPhotosForAlbums(albums)
                 case (_, .some(let error)):
-                    self.viewDelegate?.showDownloadUserAlbumsDataError(withMessage: DisplayError.photos.displayMessage(apiError: error))
+                    self.viewDelegate?.showDownloadAlbumsDataError(withMessage: DisplayError.photos.displayMessage(apiError: error))
+                    self.viewDelegate?.hideProgress()
                 case (.none, .none):
                     print("Defult case")
                 }
-                self.viewDelegate?.hideProgress()
             }
         } else {
             viewDelegate?.showAlbumsError()

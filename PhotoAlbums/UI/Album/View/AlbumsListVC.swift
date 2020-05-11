@@ -125,7 +125,7 @@ extension AlbumsListVC: AlbumsListViewDelegate {
         navigationController?.pushViewController(photoVC, animated: false)
     }
     
-    func showDownloadUserAlbumsDataError(withMessage: DisplayErrorModel) {
+    func showDownloadAlbumsDataError(withMessage: DisplayErrorModel) {
         DispatchQueue.main.async {
         let alert = CustomErrorAlert.setUpErrorAlert(withMessage)
             self.present(alert, animated: true)
