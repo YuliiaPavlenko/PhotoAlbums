@@ -123,7 +123,8 @@ extension AlbumsListVC: AlbumsListViewDelegate {
     }
     
     func showImage() {
-        
+        let photoVC = PhotoVC()
+        navigationController?.pushViewController(photoVC, animated: false)
     }
     
     func showDownloadUserAlbumsDataError(withMessage: DisplayErrorModel) {
