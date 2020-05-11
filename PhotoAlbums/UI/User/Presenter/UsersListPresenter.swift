@@ -16,7 +16,6 @@ protocol UsersListViewDelegate: class {
     func hideProgress()
 }
 
-
 class UsersListPresenter {
     var usersList = [UsersListItem]()
     var originalUsersList = [User]()
