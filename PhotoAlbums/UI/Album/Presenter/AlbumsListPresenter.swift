@@ -52,36 +52,17 @@ class AlbumsListPresenter {
         let selectedUser = Cache.shared.getSelectedUser()
         
         if let user = selectedUser {
-            viewDelegate?.showProgress()
-            
             NetworkManager.shared.getAlbumsForUser(userId: user.id) { [weak self] (albums, error) in
                 
                 guard let self = self else { return }
                 
-                if let albums = albums {
-                    NetworkManager.shared.getPhotos() { [weak self] (photos, error) in
-                        guard let self = self else { return }
-
-                        if let photos = photos {
-                            for photo in photos {
-                                self.photos.append(photo)
-                            }
-
-                            self.parsePhotos(albums)
-
-                            self.viewDelegate?.showAlbums(self.albumsWithPhotos)
-                        } else {
-                            self.viewDelegate?.hideProgress()
-
-                            if let error = error {
-                                self.viewDelegate?.showDownloadPhotosDataError(withMessage: DisplayError.albums.displayMessage(apiError: error))
-                            }
-                        }
-                    }
-                } else {
-                    if let error = error {
-                        self.viewDelegate?.showDownloadUserAlbumsDataError(withMessage: DisplayError.photos.displayMessage(apiError: error))
-                    }
+                switch (albums, error) {
+                case (let albums?, nil):
+                    self.getPhotosForAlbums(albums)
+                case (_, .some(let error)):
+                    self.viewDelegate?.showDownloadUserAlbumsDataError(withMessage: DisplayError.photos.displayMessage(apiError: error))
+                case (.none, .none):
+                    print("Defult case")
                 }
                 self.viewDelegate?.hideProgress()
             }
@@ -90,9 +71,9 @@ class AlbumsListPresenter {
         }
     }
     
-    fileprivate func parsePhotos(_ albums: [Album]) {
+    fileprivate func parsePhotosForAlbums(_ albums: [Album]) {
         for album in albums {
-            let photosForAlbum = self.photos.filter { $0.albumID == album.id }
+            let photosForAlbum = photos.filter { $0.albumID == album.id }
             
             var photoItems = [PhotoItem]()
             for photo in photosForAlbum {
@@ -104,6 +85,28 @@ class AlbumsListPresenter {
             let albumHolder = AlbumHolder(album: newAlbum, photos: photoItems)
             
             self.albumsWithPhotos.append(albumHolder)
+        }
+    }
+    
+    fileprivate func getPhotosForAlbums(_ albums: [Album]) {
+        NetworkManager.shared.getPhotos() { [weak self] (photos, error) in
+            guard let self = self else { return }
+ 
+            switch (photos, error) {
+            case (let photos?, nil):
+                for photo in photos {
+                    self.photos.append(photo)
+                }
+                
+                self.parsePhotosForAlbums(albums)
+                
+                self.viewDelegate?.showAlbums(self.albumsWithPhotos)
+            case (_, .some(let error)):
+                self.viewDelegate?.showDownloadPhotosDataError(withMessage: DisplayError.albums.displayMessage(apiError: error))
+            case (.none, .none):
+                print("Defult case")
+            }
+            self.viewDelegate?.hideProgress()
         }
     }
 }
