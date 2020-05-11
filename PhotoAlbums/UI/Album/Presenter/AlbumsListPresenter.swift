@@ -12,7 +12,7 @@ protocol AlbumsListViewDelegate: class {
     func showAlbums(_ albumsWithPhotos: [AlbumHolder])
     func showDownloadAlbumsDataError(withMessage: DisplayErrorModel)
     func showDownloadPhotosDataError(withMessage: DisplayErrorModel)
-    func showAlbumsError()
+    func showAlbumsError(withMessage: DisplayErrorModel)
     func showImage()
     func showProgress()
     func hideProgress()
@@ -67,7 +67,7 @@ class AlbumsListPresenter {
                 }
             }
         } else {
-            viewDelegate?.showAlbumsError()
+            viewDelegate?.showAlbumsError(withMessage: DisplayError.noUser.displayMessage(apiError: nil))
         }
     }
     

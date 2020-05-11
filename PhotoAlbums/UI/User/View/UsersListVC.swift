@@ -20,15 +20,11 @@ class UsersListVC: UIViewController {
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        userListPresenter.viewDelegate = self
         view.backgroundColor = .white
+        userListPresenter.viewDelegate = self
+        customizeNavigationBar(true)
         setupTableView()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         userListPresenter.viewIsPrepared()
-        customizeNavigationBar(animated)
     }
 
     // MARK: - Custom Functions

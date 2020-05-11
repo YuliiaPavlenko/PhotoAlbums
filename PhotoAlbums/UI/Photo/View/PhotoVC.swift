@@ -41,12 +41,11 @@ class PhotoVC: UIViewController, WKNavigationDelegate {
         photoPresenter.finishLoadingPhoto()
     }
     
-    // MARK: - Custom Function
+    // MARK: - Navigation Bar
     func customizeNavigationBar(_ animated: Bool) {
         title = photoPresenter.setNavigationBarTitle()
     }
 }
-
 
 extension PhotoVC: PhotoViewDelegate {
     func showImageFromURL(_ url: String) {
@@ -54,12 +53,7 @@ extension PhotoVC: PhotoViewDelegate {
         webView.load(URLRequest(url: url!))
     }
     
-    func showPhotoError() {
-        let alert = CustomErrorAlert.setUpErrorAlert(nil)
-        present(alert, animated: true)
-    }
-    
-    func showDownloadPhotoError(withMessage: DisplayErrorModel) {
+    func showLoadPhotoError(withMessage: DisplayErrorModel) {
         DispatchQueue.main.async {
         let alert = CustomErrorAlert.setUpErrorAlert(withMessage)
             self.present(alert, animated: true)

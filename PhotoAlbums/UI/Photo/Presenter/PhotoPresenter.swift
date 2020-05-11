@@ -10,8 +10,7 @@ import Foundation
 
 protocol PhotoViewDelegate: class {
     func showImageFromURL(_ url: String)
-    func showPhotoError()
-    func showDownloadPhotoError(withMessage: DisplayErrorModel)
+    func showLoadPhotoError(withMessage: DisplayErrorModel)
     func showProgress()
     func hideProgress()
 }
@@ -29,11 +28,11 @@ class PhotoPresenter {
             if let url = photoToShow.url {
                 viewDelegate?.showImageFromURL(url)
             } else {
-                viewDelegate?.showPhotoError()
+                viewDelegate?.showLoadPhotoError(withMessage: DisplayError.photo.displayMessage(apiError: nil))
             }
             navBarTitle = photoToShow.title
         } else {
-            viewDelegate?.showPhotoError()
+            viewDelegate?.showLoadPhotoError(withMessage: DisplayError.photo.displayMessage(apiError: nil))
         }
     }
     

@@ -22,13 +22,9 @@ class AlbumsListVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         albumListPresenter.viewDelegate = self
+        customizeNavigationBar(true)
         albumListPresenter.viewIsPrepared()
         setupTableView()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        customizeNavigationBar(animated)
     }
 
     // MARK: - Custom Functions
@@ -115,8 +111,8 @@ extension AlbumsListVC: AlbumsListViewDelegate {
         }
     }
     
-    func showAlbumsError() {
-        let alert = CustomErrorAlert.setUpErrorAlert(nil)
+    func showAlbumsError(withMessage: DisplayErrorModel) {
+        let alert = CustomErrorAlert.setUpErrorAlert(withMessage)
         present(alert, animated: true)
     }
     

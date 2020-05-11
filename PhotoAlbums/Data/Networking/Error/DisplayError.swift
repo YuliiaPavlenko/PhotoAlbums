@@ -14,18 +14,20 @@ struct DisplayErrorModel {
 }
 
 enum DisplayError {
-    case users, albums, photos, photo
+    case users, albums, photos, photo, noUser
 
-    func displayMessage(apiError: ApiError) -> DisplayErrorModel {
+    func displayMessage(apiError: ApiError?) -> DisplayErrorModel {
         switch self {
         case .users:
-            return getErrorMessageForUsersList(apiError: apiError)
+            return getErrorMessageForUsersList(apiError: apiError!)
         case .albums:
-            return getErrorMessageForAlbums(apiError: apiError)
+            return getErrorMessageForAlbums(apiError: apiError!)
         case .photos:
-            return getErrorMessageForPhotos(apiError: apiError)
+            return getErrorMessageForPhotos(apiError: apiError!)
         case .photo:
-            return getErrorMessageForPhoto(apiError: apiError)
+            return getErrorMessageForPhoto()
+        case .noUser:
+            return noUserErrorMessage()
         }
     }
 
@@ -74,18 +76,15 @@ enum DisplayError {
         return DisplayErrorModel(title: errorDescription, message: message!)
     }
     
-    private func getErrorMessageForPhoto(apiError: ApiError) -> DisplayErrorModel {
+    private func getErrorMessageForPhoto() -> DisplayErrorModel {
         let errorDescription = "Error get photo"
-        var message: String?
-        switch apiError {
-        case .serverError, .unknown, .communicationError:
-            message = "Failed to load photo. Please make sure you\'re connected to the internet and try again."
-        default:
-            message = "Unknown error"
-        }
-        #if DEBUG
-        message = apiError.debugDescription
-        #endif
-        return DisplayErrorModel(title: errorDescription, message: message!)
+        let message = "Failed to find photo"
+        return DisplayErrorModel(title: errorDescription, message: message)
+    }
+    
+    private func noUserErrorMessage() -> DisplayErrorModel {
+        let errorDescription = "Error get user"
+        let message = "Failed to find data for selected user"
+        return DisplayErrorModel(title: errorDescription, message: message)
     }
 }
